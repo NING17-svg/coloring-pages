@@ -1,0 +1,90 @@
+{
+  "site": {
+    "title": "Coloring Pages Hub",
+    "description": "Download and create beautiful black and white coloring pages. Use AI to generate custom coloring sheets or browse our categorized collection."
+  },
+  "navigation": {
+    "home": "Home",
+    "categories": "Categories",
+    "create": "Create",
+    "about": "About"
+  },
+  "home": {
+    "hero": {
+      "title": "Beautiful Coloring Pages for Everyone",
+      "subtitle": "Download free printable coloring pages or create your own with AI",
+      "cta": "Start Coloring"
+    },
+    "features": {
+      "title": "Why Choose Our Coloring Pages",
+      "ai": {
+        "title": "AI-Generated Artwork",
+        "description": "Create unique coloring pages from text descriptions"
+      },
+      "quality": {
+        "title": "High-Quality Downloads",
+        "description": "Get printable PDF and PNG formats for best results"
+      },
+      "categories": {
+        "title": "Categorized Collection",
+        "description": "Find coloring pages organized by themes and subjects"
+      },
+      "free": {
+        "title": "Completely Free",
+        "description": "All basic features available at no cost"
+      }
+    },
+    "categories": {
+      "title": "Browse Categories",
+      "viewAll": "View All Categories"
+    },
+    "create": {
+      "title": "Create Your Own Coloring Page",
+      "description": "Type a description and let AI generate a unique coloring page just for you",
+      "button": "Start Creating"
+    },
+    "testimonials": {
+      "title": "What Our Users Say"
+    }
+  },
+  "create": {
+    "title": "Generate a Coloring Page",
+    "prompt": "Describe what you want to create",
+    "placeholder": "E.g. A magical forest with fairies and mushrooms",
+    "button": "Generate",
+    "loading": "Creating your coloring page...",
+    "download": "Download",
+    "tryAgain": "Try Again",
+    "error": "Something went wrong. Please try again."
+  },
+  "categories": {
+    "title": "All Categories",
+    "count": "{{count}} coloring pages"
+  },
+  "image": {
+    "download": {
+      "title": "Download Options",
+      "pdf": "Download as PDF",
+      "png": "Download as PNG",
+      "loading": "Preparing download..."
+    },
+    "related": "Related Coloring Pages",
+    "difficulty": {
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard"
+    },
+    "ageGroup": {
+      "children": "For Children",
+      "teen": "For Teens",
+      "adult": "For Adults",
+      "all": "For All Ages"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Coloring Pages Hub. All rights reserved.",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "contact": "Contact"
+  }
+} 
