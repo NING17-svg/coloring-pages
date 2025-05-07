@@ -1,11 +1,11 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Create Butterfly Coloring Pages - Custom Design Tool | butterflycoloringpages.com',
-  description: 'Design your own custom butterfly coloring pages with our AI generator. Describe your ideal butterfly design and download instantly for free printing.',
-  keywords: ['butterfly coloring pages', 'custom butterfly designs', 'create coloring pages', 'AI coloring generator', 'printable butterflies'],
+  title: 'Create Butterfly Coloring Pages - Custom Design Tool | butterfly-coloring-pages.com',
+  description: 'Create your own custom butterfly coloring pages using our AI-powered design tool. Generate unique printable designs with a simple text prompt.',
+  keywords: ['custom coloring pages', 'AI generated coloring', 'create butterfly coloring', 'personalized coloring pages', 'butterfly design tool'],
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://butterflycoloringpages.com/create'
+    canonical: 'https://butterfly-coloring-pages.com/create'
   }
 }; 

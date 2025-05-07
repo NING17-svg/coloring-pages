@@ -6,12 +6,12 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Paintbrush, Image as ImageIcon, Download, Star, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Butterfly Coloring Pages - Free Printable Designs | butterflycoloringpages.com',
+  title: 'Butterfly Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com',
   description: 'Download beautiful butterfly coloring pages for free. Create custom butterfly designs with our AI or browse our curated collection for kids and adults. Print & enjoy!',
   keywords: ['butterfly coloring pages', 'printable coloring sheets', 'free coloring pages', 'butterfly designs', 'kids coloring pages'],
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://butterflycoloringpages.com/'
+    canonical: 'https://butterfly-coloring-pages.com/'
   }
 };
 

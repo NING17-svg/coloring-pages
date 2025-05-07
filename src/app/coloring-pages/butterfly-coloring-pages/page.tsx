@@ -5,12 +5,12 @@ import Link from 'next/link';
 import { getCategoryData } from '@/lib/coloring-data';
 
 export const metadata: Metadata = {
-  title: 'Butterfly Coloring Pages - Free Printable Designs | butterflycoloringpages.com',
-  description: 'Download beautiful butterfly coloring pages for free. Printable butterfly designs for kids and adults featuring detailed wings and patterns.',
-  keywords: ['butterfly coloring pages', 'printable butterfly designs', 'butterfly coloring sheets', 'kids butterfly coloring', 'adult butterfly coloring'],
+  title: 'Butterfly Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com',
+  description: 'Download beautiful butterfly coloring pages for free. Detailed wing patterns, simple designs for kids, and more. Print and enjoy!',
+  keywords: ['butterfly coloring pages', 'printable butterfly designs', 'free butterfly coloring', 'kids butterfly coloring', 'butterflies to color'],
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://butterflycoloringpages.com/coloring-pages/butterfly-coloring-pages'
+    canonical: 'https://butterfly-coloring-pages.com/coloring-pages/butterfly-coloring-pages'
   }
 };
 

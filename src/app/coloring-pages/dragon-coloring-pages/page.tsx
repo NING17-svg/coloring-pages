@@ -5,12 +5,12 @@ import Link from 'next/link';
 import { getCategoryData } from '@/lib/coloring-data';
 
 export const metadata: Metadata = {
-  title: 'Dragon Coloring Pages - Free Printable Designs | butterflycoloringpages.com',
-  description: 'Download amazing dragon coloring pages for free. Printable dragon designs for kids and adults featuring detailed scales, wings and mythical creatures.',
-  keywords: ['dragon coloring pages', 'printable dragon designs', 'fantasy coloring sheets', 'mythical creature coloring', 'adult dragon coloring'],
+  title: 'Dragon Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com',
+  description: 'Download free dragon coloring pages featuring mythical creatures with detailed scales, wings and more. Perfect for kids and fantasy lovers.',
+  keywords: ['dragon coloring pages', 'printable dragon designs', 'fantasy coloring pages', 'dragon drawings to color', 'mythical creature coloring'],
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://butterflycoloringpages.com/coloring-pages/dragon-coloring-pages'
+    canonical: 'https://butterfly-coloring-pages.com/coloring-pages/dragon-coloring-pages'
   }
 };
 

@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://butterflycoloringpages.com', // 替换为你的实际网址
+  siteUrl: 'https://butterfly-coloring-pages.com', // 替换为你的实际网址
   generateRobotsTxt: false,  // 我们已经手动创建了robots.txt
   exclude: [
     '/api/*',

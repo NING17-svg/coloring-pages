@@ -5,12 +5,12 @@ import Link from 'next/link';
 import { getCategoryData } from '@/lib/coloring-data';
 
 export const metadata: Metadata = {
-  title: 'Unicorn Coloring Pages - Free Printable Designs | butterflycoloringpages.com',
-  description: 'Download magical unicorn coloring pages for free. Printable unicorn designs for kids and adults featuring rainbows, stars, and mythical scenes.',
-  keywords: ['unicorn coloring pages', 'printable unicorn designs', 'magical coloring sheets', 'fantasy unicorn coloring', 'kids unicorn pages'],
+  title: 'Unicorn Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com',
+  description: 'Download magical unicorn coloring pages for free. Enchanted designs with rainbows, stars, and fantasy elements for children and adults.',
+  keywords: ['unicorn coloring pages', 'printable unicorn designs', 'fantasy coloring sheets', 'magical creature coloring', 'rainbow unicorn coloring'],
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://butterflycoloringpages.com/coloring-pages/unicorn-coloring-pages'
+    canonical: 'https://butterfly-coloring-pages.com/coloring-pages/unicorn-coloring-pages'
   }
 };
 

@@ -23,12 +23,12 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${image.title} | Free Printable Coloring Page | butterflycoloringpages.com`,
+    title: `${image.title} | Free Printable Coloring Page | butterfly-coloring-pages.com`,
     description: image.description,
     keywords: image.tags,
     robots: 'index, follow',
     alternates: {
-      canonical: `https://butterflycoloringpages.com/coloring-pages/${params.category}/${params.imageId}`
+      canonical: `https://butterfly-coloring-pages.com/coloring-pages/${params.category}/${params.imageId}`
     }
   };
 }

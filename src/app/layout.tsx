@@ -3,7 +3,7 @@ import "./globals.css";
 import { LanguageProvider } from "@/contexts/language-context";
 
 export const metadata: Metadata = {
-  title: "Butterfly Coloring Pages - Free Printable Designs | butterflycoloringpages.com",
+  title: "Butterfly Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com",
   description: "Download beautiful butterfly coloring pages for free. Create custom butterfly designs with our AI or browse our curated collection for kids and adults.",
   keywords: ["butterfly coloring pages", "printable coloring sheets", "black and white artwork", "free coloring pages", "AI generated coloring"],
   creator: "Butterfly Coloring Pages",
@@ -13,14 +13,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://butterflycoloringpages.com",
-    title: "Butterfly Coloring Pages - Free Printable Designs | butterflycoloringpages.com",
+    url: "https://butterfly-coloring-pages.com",
+    title: "Butterfly Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com",
     description: "Download beautiful butterfly coloring pages for free. Create custom butterfly designs with our AI or browse our collection.",
     siteName: "Butterfly Coloring Pages",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Butterfly Coloring Pages - Free Printable Designs | butterflycoloringpages.com",
+    title: "Butterfly Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com",
     description: "Download beautiful butterfly coloring pages for free. Create custom butterfly designs with our AI or browse our collection.",
   },
 };

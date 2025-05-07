@@ -4,12 +4,12 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Coloring Pages - Free Printable Designs | butterflycoloringpages.com',
+  title: 'Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com',
   description: 'Browse our collection of free printable coloring pages organized by themes. Find perfect designs including butterflies, flowers, dragons and unicorns for kids and adults to print and enjoy.',
   keywords: ['coloring pages', 'printable coloring pages', 'butterfly coloring pages', 'flower coloring pages', 'dragon coloring pages', 'unicorn coloring pages'],
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://butterflycoloringpages.com/coloring-pages'
+    canonical: 'https://butterfly-coloring-pages.com/coloring-pages'
   }
 };
 

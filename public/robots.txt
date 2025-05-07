@@ -1,4 +1,4 @@
-# butterflycoloringpages.com robots.txt
+# butterfly-coloring-pages.com robots.txt
 User-agent: *
 Allow: /
 
@@ -10,4 +10,4 @@ Disallow: /admin/
 Disallow: /login/
 
 # 指向网站地图
-Sitemap: https://butterflycoloringpages.com/sitemap.xml 
+Sitemap: https://butterfly-coloring-pages.com/sitemap.xml 

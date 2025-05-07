@@ -5,12 +5,12 @@ import Link from 'next/link';
 import { getCategoryData } from '@/lib/coloring-data';
 
 export const metadata: Metadata = {
-  title: 'Flower Coloring Pages - Free Printable Designs | butterflycoloringpages.com',
-  description: 'Download beautiful flower coloring pages for free. Printable floral designs for kids and adults featuring roses, daisies, tulips and more.',
-  keywords: ['flower coloring pages', 'printable flower designs', 'floral coloring sheets', 'rose coloring pages', 'adult flower coloring'],
+  title: 'Flower Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com',
+  description: 'Download beautiful flower coloring pages for free. Rose, tulip, daisy and more floral designs available to print for all ages.',
+  keywords: ['flower coloring pages', 'printable flower designs', 'floral coloring sheets', 'rose coloring pages', 'garden coloring pages'],
   robots: 'index, follow',
   alternates: {
-    canonical: 'https://butterflycoloringpages.com/coloring-pages/flower-coloring-pages'
+    canonical: 'https://butterfly-coloring-pages.com/coloring-pages/flower-coloring-pages'
   }
 };
 
