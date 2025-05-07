@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useLanguage } from '@/contexts/language-context';
 import { Button } from '@/components/ui/button';
 
@@ -11,9 +12,16 @@ export function Header() {
     <header className="border-b bg-background sticky top-0 z-50">
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         {/* Logo */}
-        <Link href="/" className="font-bold text-xl flex items-center">
-          <span className="bg-primary text-primary-foreground py-1 px-2 rounded mr-1">CP</span>
-          <span>Coloring Pages Hub</span>
+        <Link href="/" className="font-bold text-xl flex items-center gap-2">
+          <Image 
+            src="/logo.svg" 
+            alt="Butterfly Logo" 
+            width={40} 
+            height={40}
+            className="h-auto"
+            priority
+          />
+          <span>Butterfly Coloring Pages</span>
         </Link>
         
         {/* Main Navigation */}
@@ -21,7 +29,7 @@ export function Header() {
           <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
             {t('navigation.home')}
           </Link>
-          <Link href="/categories" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link href="/coloring-pages" className="text-sm font-medium hover:text-primary transition-colors">
             {t('navigation.categories')}
           </Link>
           <Link href="/create" className="text-sm font-medium hover:text-primary transition-colors">

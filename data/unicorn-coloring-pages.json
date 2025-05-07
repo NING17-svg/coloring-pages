@@ -1,0 +1,27 @@
+{
+  "title": "Unicorn Coloring Pages",
+  "description": "Magical unicorn designs with rainbows, stars and enchanted scenes",
+  "count": 2,
+  "images": [
+    {
+      "id": "0001-unicorn-coloring-pages",
+      "title": "Magical Unicorn Coloring Page",
+      "description": "A magical unicorn in an enchanted forest with stars and rainbow",
+      "imageUrl": "/images/coloring/unicorn/0001-unicorn-coloring-pages.webp",
+      "difficulty": "medium",
+      "ageGroup": "children",
+      "downloadCount": 0,
+      "tags": ["unicorn", "fantasy", "magical", "rainbow"]
+    },
+    {
+      "id": "0002-unicorn-coloring-pages",
+      "title": "Unicorn and Stars Coloring Page",
+      "description": "A beautiful unicorn surrounded by twinkling stars and magical elements",
+      "imageUrl": "/images/coloring/unicorn/0002-unicorn-coloring-pages.webp",
+      "difficulty": "easy",
+      "ageGroup": "children",
+      "downloadCount": 0,
+      "tags": ["unicorn", "stars", "magical", "fantasy"]
+    }
+  ]
+} 

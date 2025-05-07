@@ -1,0 +1,74 @@
+import { Metadata } from 'next';
+import { LayoutContainer } from '@/components/layout/layout-container';
+import Image from 'next/image';
+import Link from 'next/link';
+import { getCategoryData } from '@/lib/coloring-data';
+
+export const metadata: Metadata = {
+  title: 'Butterfly Coloring Pages - Free Printable Designs | butterflycoloringpages.com',
+  description: 'Download beautiful butterfly coloring pages for free. Printable butterfly designs for kids and adults featuring detailed wings and patterns.',
+  keywords: ['butterfly coloring pages', 'printable butterfly designs', 'butterfly coloring sheets', 'kids butterfly coloring', 'adult butterfly coloring'],
+  robots: 'index, follow',
+  alternates: {
+    canonical: 'https://butterflycoloringpages.com/coloring-pages/butterfly-coloring-pages'
+  }
+};
+
+export default function ButterflyColoringPages() {
+  // 获取蝴蝶分类数据
+  const categoryData = getCategoryData('butterfly-coloring-pages');
+  const images = categoryData?.images || [];
+
+  return (
+    <LayoutContainer>
+      <section className="py-12">
+        <div className="container px-4 mx-auto">
+          <h1 className="text-4xl font-bold mb-4">Butterfly Coloring Pages</h1>
+          <p className="text-gray-600 max-w-3xl mb-8">
+            Explore our collection of free printable butterfly coloring pages. Perfect for kids and adults who love these beautiful insects with their delicate wings and patterns.
+          </p>
+          
+          {/* Gallery of butterfly coloring pages */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
+            {images.map((image, i) => (
+              <Link href={`/coloring-pages/butterfly-coloring-pages/${image.id}`} key={i} className="group">
+                <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md">
+                  <div className="aspect-video bg-gray-100 relative">
+                    <Image 
+                      src={image.imageUrl} 
+                      alt={image.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-medium group-hover:text-primary transition-colors">{image.title}</h3>
+                    <p className="text-sm text-gray-500">{image.difficulty} • {image.ageGroup}</p>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-12 bg-gray-50 p-6 rounded-lg">
+            <h2 className="text-2xl font-bold mb-4">About Butterfly Coloring Pages</h2>
+            <div className="prose max-w-none">
+              <p>
+                Butterflies are among the most beloved insects in the world, known for their vibrant colors and delicate wings. 
+                Our butterfly coloring pages capture the intricate details of these beautiful creatures, making them perfect for both kids and adults.
+              </p>
+              <p>
+                Coloring butterflies can help improve fine motor skills in children while providing a relaxing, meditative activity for adults. 
+                Our designs range from simple butterfly outlines suitable for young children to complex patterns perfect for experienced colorists.
+              </p>
+              <p>
+                All of our butterfly coloring pages are free to download and print. Simply click on any design to view it in detail, then download it in 
+                your preferred format for immediate printing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </LayoutContainer>
+  );
+} 

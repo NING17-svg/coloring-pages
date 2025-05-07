@@ -1,0 +1,17 @@
+{
+  "title": "Flower Coloring Pages",
+  "description": "Gorgeous floral designs featuring roses, daisies, tulips and more",
+  "count": 1,
+  "images": [
+    {
+      "id": "0001-flower-coloring-pages",
+      "title": "Rose Flower Coloring Page",
+      "description": "A beautiful rose with detailed petals and leaves for coloring enjoyment",
+      "imageUrl": "/images/coloring/flower/001-flower-coloring-pages.webp", 
+      "difficulty": "medium",
+      "ageGroup": "all",
+      "downloadCount": 0,
+      "tags": ["flower", "rose", "nature", "garden"]
+    }
+  ]
+} 

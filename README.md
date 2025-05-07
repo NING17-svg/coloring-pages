@@ -154,7 +154,7 @@ OPENAI_API_KEY=your_openai_api_key
 ```
 /                             # 首页
 /create                       # 创建新着色页
-/categories                   # 所有分类列表
+/coloring-pages                   # 所有分类列表
 /category/:slug               # 特定分类页面
 /image/:id                    # 单张图片详情页
 /download/:id                 # 图片下载处理
@@ -171,8 +171,8 @@ OPENAI_API_KEY=your_openai_api_key
 GET  /api/images                  # 获取图片列表 (分页、筛选)
 GET  /api/images/[id]             # 获取单个图片详情
 POST /api/images/generate         # 生成新图片
-GET  /api/categories              # 获取分类列表
-GET  /api/categories/[slug]       # 获取特定分类及其图片
+GET  /api/coloring-pages              # 获取分类列表
+GET  /api/coloring-pages/[slug]       # 获取特定分类及其图片
 GET  /api/trending                # 获取热门图片
 POST /api/download/[id]           # 下载图片（记录统计）
 ```
@@ -202,7 +202,7 @@ GET    /api/payment/plans         # 获取套餐计划
 
 ## 首页UI设计
 
-首页采用现代化、清晰的布局，包含以下部分：
+首页采用现代化、清晰的布局，类似苹果官网的设计，包含以下部分：
 
 ### 1. 导航栏
 - 网站Logo
@@ -280,3 +280,78 @@ GET    /api/payment/plans         # 获取套餐计划
 - 生成优化的PDF和高质量PNG格式
 - 使用流式下载减少服务器负载
 - 记录下载统计数据
+
+## 动态路由设计
+
+着色页面的路由结构如下：
+
+```
+/coloring-pages/[category]/[imageId]
+```
+
+例如：
+- `/coloring-pages/butterfly/0001-butterfly-coloring-pages`
+- `/coloring-pages/dragon/0001-dragon-coloring-pages`
+
+### 图片ID命名规范
+
+图片ID使用以下格式：四位数字编号 + 短横线 + 类别名称 + 短横线 + "coloring-pages"
+
+例如：`0001-butterfly-coloring-pages`
+
+### 数据管理
+
+每个类别有自己的JSON文件，存放在`/data/`目录下：
+
+- `/data/butterfly-coloring-pages.json`
+- `/data/flower-coloring-pages.json`
+- `/data/dragon-coloring-pages.json`
+- `/data/unicorn-coloring-pages.json`
+
+### JSON结构
+
+```json
+{
+  "title": "蝴蝶着色页",
+  "description": "精美的蝴蝶着色页集合，适合儿童和成人",
+  "count": 4,
+  "images": [
+    {
+      "id": "0001-butterfly-coloring-pages",
+      "title": "简单蝴蝶着色页",
+      "description": "适合初学者的简单蝴蝶着色页",
+      "tags": ["蝴蝶", "简单", "初学者"],
+      "imageUrl": "/images/coloring/butterfly/0001-butterfly.webp"
+    },
+    // 更多图片...
+  ]
+}
+```
+
+### 技术实现
+
+1. **动态路由页面**：
+   - `/coloring-pages/[category]/page.tsx` - 类别页面
+   - `/coloring-pages/[category]/[imageId]/page.tsx` - 图片详情页面
+
+2. **数据获取**：
+   - 从对应的JSON文件中读取数据
+   - 使用类别名称和图片ID进行数据过滤
+
+3. **URL处理**：
+   - 所有ID均使用短横线格式，保证URL的一致性和可读性
+
+4. **元数据生成**：
+   - 为每个页面生成SEO友好的元数据，包括标题、描述和OpenGraph数据
+
+5. **静态路径生成**：
+   - 使用`generateStaticParams()`预生成所有静态路径，提高性能
+
+### 优势
+
+1. **可扩展性**：轻松添加新类别和图片
+2. **SEO友好**：动态生成元数据和遵循最佳URL实践
+3. **数据管理有序**：每个类别独立管理自己的数据
+4. **性能优化**：通过静态路径生成提高加载速度
+
+后期随着图片数量增加，可考虑迁移至数据库存储，但基本组织方式保持不变。

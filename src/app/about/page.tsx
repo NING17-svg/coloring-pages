@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import { LayoutContainer } from '@/components/layout/layout-container';
 
 export const metadata: Metadata = {
-  title: 'About Us - Coloring Pages Hub',
-  description: 'Learn about Coloring Pages Hub, our mission to provide high-quality coloring pages, and how our platform works.',
+  title: 'About Us - Butterfly Coloring Pages',
+  description: 'Learn about Butterfly Coloring Pages, our mission to provide high-quality butterfly coloring pages, and how our platform works.',
 };
 
 export default function AboutPage() {
@@ -12,13 +12,13 @@ export default function AboutPage() {
       <section className="py-12">
         <div className="container px-4 mx-auto">
           <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl font-bold mb-8">About Coloring Pages Hub</h1>
+            <h1 className="text-4xl font-bold mb-8">About Butterfly Coloring Pages</h1>
             
             <div className="prose prose-lg max-w-none">
               <p>
-                Welcome to Coloring Pages Hub, your go-to destination for high-quality, printable coloring pages. 
+                Welcome to Butterfly Coloring Pages, your go-to destination for high-quality, printable butterfly coloring pages. 
                 Our platform combines traditional coloring page curation with cutting-edge AI technology to offer 
-                an extensive library of black and white artwork suitable for all ages.
+                an extensive library of black and white butterfly artwork suitable for all ages.
               </p>
               
               <h2>Our Mission</h2>
@@ -34,7 +34,7 @@ export default function AboutPage() {
               </p>
               <ul>
                 <li>
-                  <strong>Browse Categories:</strong> Explore our curated collection of coloring pages organized 
+                  <strong>Browse Coloring Pages:</strong> Explore our curated collection of coloring pages organized 
                   by themes, difficulty levels, and age groups.
                 </li>
                 <li>
@@ -46,7 +46,7 @@ export default function AboutPage() {
               
               <h2>Technology</h2>
               <p>
-                Coloring Pages Hub uses advanced AI image generation technology to create custom coloring pages. 
+                Butterfly Coloring Pages uses advanced AI image generation technology to create custom butterfly coloring pages. 
                 Our system has been specially designed to produce black and white line drawings that are perfect 
                 for coloring, with appropriate level of detail and clear outlines.
               </p>

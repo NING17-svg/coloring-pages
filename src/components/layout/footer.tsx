@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useLanguage } from '@/contexts/language-context';
 
 export function Footer() {
@@ -13,7 +14,16 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Column 1: Site Info */}
           <div className="space-y-4">
-            <h3 className="font-bold text-lg">Coloring Pages Hub</h3>
+            <div className="flex items-center gap-2">
+              <Image 
+                src="/logo.svg" 
+                alt="Butterfly Logo" 
+                width={36} 
+                height={36}
+                className="h-auto"
+              />
+              <h3 className="font-bold text-lg">Butterfly Coloring Pages</h3>
+            </div>
             <p className="text-sm text-muted-foreground max-w-xs">
               Download and create beautiful black and white coloring pages for kids and adults.
             </p>
@@ -29,7 +39,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/categories" className="hover:text-primary transition-colors">
+                <Link href="/coloring-pages" className="hover:text-primary transition-colors">
                   {t('navigation.categories')}
                 </Link>
               </li>
@@ -81,7 +91,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="mt-10 pt-6 border-t border-border text-center text-sm text-muted-foreground">
           <p>
-            © {currentYear} Coloring Pages Hub. {t('footer.copyright')}
+            © {currentYear} Butterfly Coloring Pages. {t('footer.copyright')}
           </p>
         </div>
       </div>

@@ -1,38 +1,27 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/language-context";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "Coloring Pages Hub - Free Printable Coloring Pages",
-  description: "Download beautiful black and white coloring pages for free. Create custom coloring sheets with AI or browse our curated collection for kids and adults.",
-  keywords: ["coloring pages", "printable coloring sheets", "black and white artwork", "free coloring pages", "AI generated coloring"],
-  creator: "Coloring Pages Hub",
-  publisher: "Coloring Pages Hub",
-  authors: [{ name: "Coloring Pages Hub Team" }],
+  title: "Butterfly Coloring Pages - Free Printable Designs | butterflycoloringpages.com",
+  description: "Download beautiful butterfly coloring pages for free. Create custom butterfly designs with our AI or browse our curated collection for kids and adults.",
+  keywords: ["butterfly coloring pages", "printable coloring sheets", "black and white artwork", "free coloring pages", "AI generated coloring"],
+  creator: "Butterfly Coloring Pages",
+  publisher: "Butterfly Coloring Pages",
+  authors: [{ name: "Butterfly Coloring Pages Team" }],
   robots: "index, follow",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://coloring-pages-hub.com",
-    title: "Coloring Pages Hub - Free Printable Coloring Pages",
-    description: "Download beautiful black and white coloring pages for free. Create custom coloring sheets with AI or browse our collection.",
-    siteName: "Coloring Pages Hub",
+    url: "https://butterflycoloringpages.com",
+    title: "Butterfly Coloring Pages - Free Printable Designs | butterflycoloringpages.com",
+    description: "Download beautiful butterfly coloring pages for free. Create custom butterfly designs with our AI or browse our collection.",
+    siteName: "Butterfly Coloring Pages",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Coloring Pages Hub - Free Printable Coloring Pages",
-    description: "Download beautiful black and white coloring pages for free. Create custom coloring sheets with AI or browse our collection.",
+    title: "Butterfly Coloring Pages - Free Printable Designs | butterflycoloringpages.com",
+    description: "Download beautiful butterfly coloring pages for free. Create custom butterfly designs with our AI or browse our collection.",
   },
 };
 
@@ -50,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
+        className="font-sans antialiased"
       >
         <LanguageProvider>
           {children}

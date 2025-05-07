@@ -26,15 +26,19 @@ const translationsMap: Record<Language, Translations> = {
 };
 
 // 根据点分隔的路径从对象中获取值
-function getValueByPath(obj: any, path: string): string {
+function getValueByPath(obj: Record<string, unknown>, path: string): string {
   const keys = path.split('.');
-  let current = obj;
+  let current: unknown = obj;
 
   for (const key of keys) {
     if (current === undefined || current === null) {
       return path; // 返回路径作为回退值
     }
-    current = current[key];
+    if (typeof current === 'object' && key in (current as Record<string, unknown>)) {
+      current = (current as Record<string, unknown>)[key];
+    } else {
+      return path;
+    }
   }
 
   return typeof current === 'string' ? current : path;

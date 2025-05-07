@@ -1,11 +1,11 @@
 {
   "site": {
-    "title": "Coloring Pages Hub",
+    "title": "Butterfly Coloring Pages",
     "description": "Download and create beautiful black and white coloring pages. Use AI to generate custom coloring sheets or browse our categorized collection."
   },
   "navigation": {
     "home": "Home",
-    "categories": "Categories",
+    "categories": "Coloring Pages",
     "create": "Create",
     "about": "About"
   },
@@ -35,8 +35,8 @@
       }
     },
     "categories": {
-      "title": "Browse Categories",
-      "viewAll": "View All Categories"
+      "title": "Browse Coloring Pages",
+      "viewAll": "View All Coloring Pages"
     },
     "create": {
       "title": "Create Your Own Coloring Page",
@@ -58,7 +58,7 @@
     "error": "Something went wrong. Please try again."
   },
   "categories": {
-    "title": "All Categories",
+    "title": "All Coloring Pages",
     "count": "{{count}} coloring pages"
   },
   "image": {
@@ -82,7 +82,7 @@
     }
   },
   "footer": {
-    "copyright": "© 2024 Coloring Pages Hub. All rights reserved.",
+    "copyright": "© 2024 Butterfly Coloring Pages. All rights reserved.",
     "terms": "Terms of Service",
     "privacy": "Privacy Policy",
     "contact": "Contact"
