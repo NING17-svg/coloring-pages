@@ -18,28 +18,28 @@ export default function ColoringPagesPage() {
     {
       name: 'Butterfly Coloring Pages',
       description: 'Beautiful butterfly designs with detailed wings and patterns',
-      image: '/images/coloring/butterfly/0001-butterfly.webp',
+      image: '/images/coloring/butterfly/0001-butterfly-coloring-pages.webp',
       count: 4,
       slug: 'butterfly-coloring-pages'
     },
     {
       name: 'Flower Coloring Pages',
       description: 'Gorgeous floral designs featuring roses, daisies, tulips and more',
-      image: '/images/coloring/butterfly/0002-butterfly.webp',
+      image: '/images/coloring/butterfly/0002-butterfly-coloring-pages.webp',
       count: 1,
       slug: 'flower-coloring-pages'
     },
     {
       name: 'Dragon Coloring Pages',
       description: 'Mythical dragon designs with scales, wings and fire-breathing action',
-      image: '/images/coloring/butterfly/0003-butterfly.webp',
+      image: '/images/coloring/butterfly/0003-butterfly-coloring-pages.webp',
       count: 1,
       slug: 'dragon-coloring-pages'
     },
     {
       name: 'Unicorn Coloring Pages',
       description: 'Magical unicorn designs with rainbows, stars and enchanted scenes',
-      image: '/images/coloring/butterfly/0004-butterfly.webp',
+      image: '/images/coloring/butterfly/0004-butterfly-coloring-pages.webp',
       count: 1,
       slug: 'unicorn-coloring-pages'
     }

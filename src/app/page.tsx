@@ -47,7 +47,7 @@ export default function Home() {
                 <div className="bg-white p-4 rounded-xl shadow-sm">
                   <div className="bg-gray-100 rounded-lg aspect-square relative overflow-hidden">
                     <Image 
-                      src="/images/coloring/butterfly/0001-butterfly.webp" 
+                      src="/images/coloring/butterfly/0001-butterfly-coloring-pages.webp" 
                       alt="Butterfly coloring page design" 
                       className="object-cover"
                       fill
@@ -57,7 +57,7 @@ export default function Home() {
                 <div className="bg-white p-4 rounded-xl shadow-sm mt-8">
                   <div className="bg-gray-100 rounded-lg aspect-square relative overflow-hidden">
                     <Image 
-                      src="/images/coloring/butterfly/0002-butterfly.webp" 
+                      src="/images/coloring/butterfly/0002-butterfly-coloring-pages.webp" 
                       alt="Butterfly coloring page for kids" 
                       className="object-cover"
                       fill
@@ -67,7 +67,7 @@ export default function Home() {
                 <div className="bg-white p-4 rounded-xl shadow-sm">
                   <div className="bg-gray-100 rounded-lg aspect-square relative overflow-hidden">
                     <Image 
-                      src="/images/coloring/butterfly/0003-butterfly.webp" 
+                      src="/images/coloring/butterfly/0003-butterfly-coloring-pages.webp" 
                       alt="Detailed butterfly coloring page" 
                       className="object-cover"
                       fill
@@ -77,7 +77,7 @@ export default function Home() {
                 <div className="bg-white p-4 rounded-xl shadow-sm mt-8">
                   <div className="bg-gray-100 rounded-lg aspect-square relative overflow-hidden">
                     <Image 
-                      src="/images/coloring/butterfly/0001-butterfly.webp" 
+                      src="/images/coloring/butterfly/0001-butterfly-coloring-pages.webp" 
                       alt="Monarch butterfly coloring page" 
                       className="object-cover"
                       fill
@@ -104,22 +104,22 @@ export default function Home() {
             {[
               { 
                 name: 'Butterfly coloring pages',
-                image: '/images/coloring/butterfly/0001-butterfly.webp',
+                image: '/images/coloring/butterfly/0001-butterfly-coloring-pages.webp',
                 count: 4
               },
               { 
                 name: 'Flower coloring pages',
-                image: '/images/coloring/butterfly/0002-butterfly.webp',
+                image: '/images/coloring/butterfly/0002-butterfly-coloring-pages.webp',
                 count: 1 
               },
               { 
                 name: 'Dragon coloring pages',
-                image: '/images/coloring/butterfly/0003-butterfly.webp',
+                image: '/images/coloring/butterfly/0003-butterfly-coloring-pages.webp',
                 count: 1
               },
               { 
                 name: 'Unicorn coloring pages',
-                image: '/images/coloring/butterfly/0004-butterfly.webp',
+                image: '/images/coloring/butterfly/0004-butterfly-coloring-pages.webp',
                 count: 1
               }
             ].map((category, index) => (

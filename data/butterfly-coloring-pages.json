@@ -6,42 +6,42 @@
     {
       "id": "0001-butterfly-coloring-pages",
       "title": "Detailed Butterfly Wings Coloring Page",
-      "description": "A beautiful butterfly with intricate wing patterns, perfect for detailed coloring",
-      "imageUrl": "/images/coloring/butterfly/0001-butterfly.webp",
+      "description": "A beautiful butterfly coloring page with intricately detailed wings and patterns.",
+      "imageUrl": "/images/coloring/butterfly/0001-butterfly-coloring-pages.webp",
+      "downloadCount": 87,
+      "tags": ["butterfly", "detailed", "nature", "insects"],
       "difficulty": "medium",
-      "ageGroup": "all",
-      "downloadCount": 0,
-      "tags": ["butterfly", "insects", "nature", "detailed"]
+      "ageGroup": "all"
     },
     {
       "id": "0002-butterfly-coloring-pages",
       "title": "Simple Butterfly Design Coloring Page",
-      "description": "A simple butterfly design perfect for younger children and beginners",
-      "imageUrl": "/images/coloring/butterfly/0002-butterfly.webp",
+      "description": "An easy butterfly coloring page perfect for children with simple outlines.",
+      "imageUrl": "/images/coloring/butterfly/0002-butterfly-coloring-pages.webp",
+      "downloadCount": 103,
+      "tags": ["butterfly", "simple", "kids", "easy"],
       "difficulty": "easy",
-      "ageGroup": "children",
-      "downloadCount": 0,
-      "tags": ["butterfly", "insects", "simple", "beginner"]
+      "ageGroup": "children"
     },
     {
       "id": "0003-butterfly-coloring-pages",
       "title": "Monarch Butterfly Coloring Page",
-      "description": "A detailed monarch butterfly with its characteristic wing pattern",
-      "imageUrl": "/images/coloring/butterfly/0003-butterfly.webp",
+      "description": "A detailed monarch butterfly coloring page showing its distinctive wing pattern.",
+      "imageUrl": "/images/coloring/butterfly/0003-butterfly-coloring-pages.webp",
+      "downloadCount": 76,
+      "tags": ["butterfly", "monarch", "detailed", "nature"],
       "difficulty": "medium",
-      "ageGroup": "all",
-      "downloadCount": 0,
-      "tags": ["butterfly", "monarch", "insects", "nature"]
+      "ageGroup": "all"
     },
     {
       "id": "0004-butterfly-coloring-pages",
       "title": "Butterfly and Flowers Coloring Page",
-      "description": "A butterfly flying among beautiful flowers, a perfect nature scene",
-      "imageUrl": "/images/coloring/butterfly/0004-butterfly.webp",
+      "description": "A beautiful scene with a butterfly hovering over flowers, perfect for nature lovers.",
+      "imageUrl": "/images/coloring/butterfly/0004-butterfly-coloring-pages.webp",
+      "downloadCount": 62,
+      "tags": ["butterfly", "flowers", "garden", "nature"],
       "difficulty": "medium",
-      "ageGroup": "all",
-      "downloadCount": 0,
-      "tags": ["butterfly", "flowers", "nature", "insects"]
+      "ageGroup": "all"
     }
   ]
 } 
