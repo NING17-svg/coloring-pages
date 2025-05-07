@@ -1,0 +1,13 @@
+# butterflycoloringpages.com robots.txt
+User-agent: *
+Allow: /
+
+# 禁止访问API路径
+Disallow: /api/
+
+# 禁止访问管理相关路径
+Disallow: /admin/
+Disallow: /login/
+
+# 指向网站地图
+Sitemap: https://butterflycoloringpages.com/sitemap.xml 
