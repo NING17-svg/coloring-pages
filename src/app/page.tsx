@@ -5,6 +5,12 @@ import { LayoutContainer } from '@/components/layout/layout-container';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Paintbrush, Image as ImageIcon, Download, Star, Users } from 'lucide-react';
 
+// 导入JSON数据
+import butterflyData from '../../data/butterfly-coloring-pages.json';
+import flowerData from '../../data/flower-coloring-pages.json';
+import dragonData from '../../data/dragon-coloring-pages.json';
+import unicornData from '../../data/unicorn-coloring-pages.json';
+
 export const metadata: Metadata = {
   title: 'Butterfly Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com',
   description: 'Download beautiful butterfly coloring pages for free. Create custom butterfly designs with our AI or browse our curated collection for kids and adults. Print & enjoy!',
@@ -67,8 +73,8 @@ export default function Home() {
                 <div className="bg-white p-4 rounded-xl shadow-sm">
                   <div className="bg-gray-100 rounded-lg aspect-square relative overflow-hidden">
                     <Image 
-                      src="/images/coloring/butterfly/0003-butterfly-coloring-pages.webp" 
-                      alt="Detailed butterfly coloring page" 
+                      src="/images/coloring/unicorn/0002-unicorn-coloring-pages.webp" 
+                      alt="A unicorn in a forest" 
                       className="object-cover"
                       fill
                     />
@@ -77,8 +83,8 @@ export default function Home() {
                 <div className="bg-white p-4 rounded-xl shadow-sm mt-8">
                   <div className="bg-gray-100 rounded-lg aspect-square relative overflow-hidden">
                     <Image 
-                      src="/images/coloring/butterfly/0001-butterfly-coloring-pages.webp" 
-                      alt="Monarch butterfly coloring page" 
+                      src="/images/coloring/flower/0001-flower-coloring-pages.webp" 
+                      alt="two flowers" 
                       className="object-cover"
                       fill
                     />
@@ -105,22 +111,22 @@ export default function Home() {
               { 
                 name: 'Butterfly coloring pages',
                 image: '/images/coloring/butterfly/0001-butterfly-coloring-pages.webp',
-                count: 4
+                count: butterflyData.count
               },
               { 
                 name: 'Flower coloring pages',
-                image: '/images/coloring/butterfly/0002-butterfly-coloring-pages.webp',
-                count: 1 
+                image: '/images/coloring/flower/0001-flower-coloring-pages.webp',
+                count: flowerData.count 
               },
               { 
                 name: 'Dragon coloring pages',
-                image: '/images/coloring/butterfly/0003-butterfly-coloring-pages.webp',
-                count: 1
+                image: '/images/coloring/dragon/0001-dragon-coloring-pages.webp',
+                count: dragonData.count
               },
               { 
                 name: 'Unicorn coloring pages',
-                image: '/images/coloring/butterfly/0004-butterfly-coloring-pages.webp',
-                count: 1
+                image: '/images/coloring/unicorn/0002-unicorn-coloring-pages.webp',
+                count: unicornData.count
               }
             ].map((category, index) => (
               <Link href={`/coloring-pages/${category.name.toLowerCase().replace(/\s+/g, '-')}`} key={index} className="group">
