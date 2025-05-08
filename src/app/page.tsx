@@ -57,8 +57,8 @@ export default function Home() {
                 <div className="bg-white p-4 rounded-xl shadow-sm mt-8">
                   <div className="bg-gray-100 rounded-lg aspect-square relative overflow-hidden">
                     <Image 
-                      src="/images/coloring/butterfly/0002-butterfly-coloring-pages.webp" 
-                      alt="Butterfly coloring page for kids" 
+                      src="/images/coloring/dragon/0001-dragon-coloring-pages.webp" 
+                      alt="A dragon flying in the sky" 
                       className="object-cover"
                       fill
                     />

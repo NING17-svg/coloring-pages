@@ -44,6 +44,18 @@ export default function RootLayout({
         <LanguageProvider>
           {children}
         </LanguageProvider>
+        <div style={{ display: 'none' }}>
+          {/* Google tag (gtag.js) */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYP1EZK0RQ"></script>
+          <script dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-YYP1EZK0RQ');
+            `
+          }} />
+        </div>
       </body>
     </html>
   );
