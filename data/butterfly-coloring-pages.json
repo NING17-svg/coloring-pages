@@ -1,7 +1,7 @@
 {
   "title": "Butterfly Coloring Pages",
   "description": "Beautiful butterfly designs with detailed wings and patterns",
-  "count": 4,
+  "count": 7,
   "images": [
     {
       "id": "0001-butterfly-coloring-pages",
@@ -42,6 +42,36 @@
       "tags": ["butterfly", "flowers", "garden", "nature"],
       "difficulty": "medium",
       "ageGroup": "all"
+    },
+    {
+      "id": "0005-butterfly-coloring-pages",
+      "title": "Chubby cartoon butterfly",
+      "description": "A Chubby cartoon butterfly.",
+      "imageUrl": "/images/coloring/butterfly/0005-butterfly-coloring-pages.webp",
+      "downloadCount": 67,
+      "tags": ["butterfly", "cartoon", "garden", "nature"],
+      "difficulty": "easy",
+      "ageGroup": "children"
+    },
+    {
+      "id": "0006-butterfly-coloring-pages",
+      "title": "Chubby cartoon butterfly",
+      "description": "A Chubby cartoon butterfly.",
+      "imageUrl": "/images/coloring/butterfly/0006-butterfly-coloring-pages.webp",
+      "downloadCount": 67,
+      "tags": ["butterfly", "cartoon", "garden", "nature"],
+      "difficulty": "easy",
+      "ageGroup": "children"
+    },
+    {
+      "id": "0007-butterfly-coloring-pages",
+      "title": "Chubby cartoon butterfly",
+      "description": "A Chubby cartoon butterfly.",
+      "imageUrl": "/images/coloring/butterfly/0007-butterfly-coloring-pages.webp",
+      "downloadCount": 25,
+      "tags": ["butterfly", "cartoon", "garden", "nature"],
+      "difficulty": "easy",
+      "ageGroup": "children"
     }
   ]
 } 
