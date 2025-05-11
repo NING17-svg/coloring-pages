@@ -1,7 +1,7 @@
 {
   "title": "Dragon Coloring Pages",
   "description": "Mythical dragon designs with scales, wings and fire-breathing action",
-  "count": 2,
+  "count": 5,
   "images": [
     {
       "id": "0001-dragon-coloring-pages",
@@ -10,7 +10,7 @@
       "imageUrl": "/images/coloring/dragon/001-dragon-coloring-pages.webp",
       "difficulty": "hard",
       "ageGroup": "teen",
-      "downloadCount": 0,
+      "downloadCount": 80,
       "tags": ["dragon", "fantasy", "mythical", "creature"]
     },
     {
@@ -20,7 +20,37 @@
       "imageUrl": "/images/coloring/dragon/002-dragon-coloring-pages.webp",
       "difficulty": "medium",
       "ageGroup": "all",
-      "downloadCount": 0,
+      "downloadCount": 56,
+      "tags": ["dragon", "fire", "fantasy", "medieval"]
+    },
+    {
+      "id": "0003-dragon-coloring-pages",
+      "title": "A fire dragon Coloring Page",
+      "description": "A fire dragon Coloring Page",
+      "imageUrl": "/images/coloring/dragon/003-dragon-coloring-pages.webp",
+      "difficulty": "medium",
+      "ageGroup": "all",
+      "downloadCount": 16,
+      "tags": ["dragon", "fire", "fantasy", "medieval"]
+    },
+    {
+      "id": "0004-dragon-coloring-pages",
+      "title": "A fire dragon Coloring Page",
+      "description": "A fire dragon Coloring Page",
+      "imageUrl": "/images/coloring/dragon/004-dragon-coloring-pages.webp",
+      "difficulty": "medium",
+      "ageGroup": "all",
+      "downloadCount": 77,
+      "tags": ["dragon", "fire", "fantasy", "medieval"]
+    },
+    {
+      "id": "0005-dragon-coloring-pages",
+      "title": "wings of fire dragon coloring page",
+      "description": "wings of fire dragon coloring page",
+      "imageUrl": "/images/coloring/dragon/005-dragon-coloring-pages.webp",
+      "difficulty": "medium",
+      "ageGroup": "all",
+      "downloadCount": 56,
       "tags": ["dragon", "fire", "fantasy", "medieval"]
     }
   ]
