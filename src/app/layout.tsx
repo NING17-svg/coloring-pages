@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { LanguageProvider } from "@/contexts/language-context";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Butterfly Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com",
@@ -38,24 +39,35 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* Google AdSense */}
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4194035852162505"
+        crossOrigin="anonymous"
+        strategy="afterInteractive"
+      />
+      
+      {/* Google Analytics */}
+      <Script 
+        async 
+        src="https://www.googletagmanager.com/gtag/js?id=G-YYP1EZK0RQ" 
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-YYP1EZK0RQ');
+        `}
+      </Script>
+      
       <body
         className="font-sans antialiased"
       >
         <LanguageProvider>
           {children}
         </LanguageProvider>
-        <div style={{ display: 'none' }}>
-          {/* Google tag (gtag.js) */}
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-YYP1EZK0RQ"></script>
-          <script dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-YYP1EZK0RQ');
-            `
-          }} />
-        </div>
       </body>
     </html>
   );
