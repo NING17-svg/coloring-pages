@@ -2,6 +2,23 @@
 User-agent: *
 Allow: /
 
+# 重要页面 - 确保这些页面被索引（对AdSense审核很重要）
+Allow: /privacy
+Allow: /terms
+Allow: /about
+
+# 标签页面 - 确保这些页面被抓取
+Allow: /coloring-pages?tag=stars
+Allow: /coloring-pages?tag=butterfly
+Allow: /coloring-pages?tag=detailed
+Allow: /coloring-pages?tag=monarch
+Allow: /coloring-pages?tag=creature
+Allow: /coloring-pages?tag=fantasy
+Allow: /coloring-pages?tag=mythical
+Allow: /coloring-pages?tag=dragon
+Allow: /coloring-pages?tag=rainbow
+Allow: /coloring-pages?tag=unicorn
+
 # 禁止访问API路径
 Disallow: /api/
 

@@ -13,7 +13,32 @@ module.exports = {
   outDir: 'public',
   changefreq: 'daily',
   priority: 0.7,
+  // 添加额外的URL到sitemap
+  additionalPaths: async (config) => {
+    const currentDate = new Date();
+    const result = [];
+    
+    // 添加标签页面到sitemap
+    const tags = [
+      'stars', 'butterfly', 'detailed', 'monarch', 'creature',
+      'fantasy', 'mythical', 'dragon', 'rainbow', 'unicorn'
+    ];
+    
+    for (const tag of tags) {
+      result.push({
+        loc: `/coloring-pages?tag=${tag}`,
+        changefreq: 'weekly',
+        priority: 0.7,
+        lastmod: currentDate.toISOString(),
+      });
+    }
+    
+    return result;
+  },
   transform: async (config, path) => {
+    // 确保使用当前日期，而不是未来日期
+    const currentDate = new Date();
+    
     // 自定义优先级设置
     if (path === '/') {
       // 首页优先级最高
@@ -21,7 +46,7 @@ module.exports = {
         loc: path,
         changefreq: 'daily',
         priority: 1.0,
-        lastmod: new Date().toISOString(),
+        lastmod: currentDate.toISOString(),
       }
     }
     
@@ -31,7 +56,7 @@ module.exports = {
         loc: path,
         changefreq: 'weekly',
         priority: 0.8,
-        lastmod: new Date().toISOString(),
+        lastmod: currentDate.toISOString(),
       }
     }
     
@@ -41,7 +66,17 @@ module.exports = {
         loc: path,
         changefreq: 'monthly',
         priority: 0.7,
-        lastmod: new Date().toISOString(),
+        lastmod: currentDate.toISOString(),
+      }
+    }
+    
+    // 隐私政策和服务条款页面 - 对AdSense审核很重要
+    if (path === '/privacy' || path === '/terms') {
+      return {
+        loc: path,
+        changefreq: 'monthly', 
+        priority: 0.6,
+        lastmod: currentDate.toISOString(),
       }
     }
     
@@ -50,7 +85,7 @@ module.exports = {
       loc: path,
       changefreq: 'weekly',
       priority: 0.5,
-      lastmod: new Date().toISOString(),
+      lastmod: currentDate.toISOString(),
     }
   },
 } 

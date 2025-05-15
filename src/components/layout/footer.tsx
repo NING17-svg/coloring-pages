@@ -88,8 +88,18 @@ export function Footer() {
           </div>
         </div>
         
+        {/* Friendly Links */}
+        <div className="mt-8 pt-6 border-t border-border">
+          <h4 className="font-medium mb-3 text-center">Friendly Links</h4>
+          <div className="flex flex-wrap justify-center gap-4 text-sm">
+            <a href=" " title="MagicBox.Tools - AI Tools Directory" className="hover:text-primary transition-colors" target="_blank" rel="noopener noreferrer">
+              MagicBox.Tools - AI Tools Directory
+            </a>
+          </div>
+        </div>
+        
         {/* Copyright */}
-        <div className="mt-10 pt-6 border-t border-border text-center text-sm text-muted-foreground">
+        <div className="mt-6 pt-6 border-t border-border text-center text-sm text-muted-foreground">
           <p>
             © {currentYear} Butterfly Coloring Pages. {t('footer.copyright')}
           </p>
