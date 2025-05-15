@@ -1,0 +1,235 @@
+{
+  "site": {
+    "title": "Schmetterling Malvorlagen - Kostenlose Druckbare Designs | butterfly-coloring-pages.com",
+    "description": "Laden Sie kostenlos schöne Schmetterling-Malvorlagen herunter. Erstellen Sie benutzerdefinierte Schmetterlingsdesigns mit unserer KI oder durchsuchen Sie unsere kuratierte Sammlung für Kinder und Erwachsene. Drucken & genießen!"
+  },
+  "navigation": {
+    "home": "Startseite",
+    "categories": "Malvorlagen",
+    "create": "Erstellen",
+    "about": "Über uns"
+  },
+  "home": {
+    "hero": {
+      "title": "Wunderschöne Schmetterling-Malvorlagen für jeden",
+      "subtitle": "Entdecken Sie unsere Sammlung kostenloser, hochwertiger Schmetterling-Malvorlagen oder erstellen Sie Ihre eigenen Designs mit unserer KI-Technologie.",
+      "browseButton": "Alle Malvorlagen ansehen",
+      "createButton": "Eigenes Design erstellen"
+    },
+    "categories": {
+      "title": "Schmetterling-Malvorlagen nach Themen durchsuchen",
+      "subtitle": "Entdecken Sie unsere große Auswahl an thematisch sortierten Schmetterling-Malvorlagen. Finden Sie das perfekte Schmetterlingsdesign für jedes Alter und Interesse.",
+      "viewAll": "Alle Malvorlagen ansehen",
+      "butterflyCategory": "Schmetterling-Malvorlagen",
+      "flowerCategory": "Blumen-Malvorlagen",
+      "dragonCategory": "Drachen-Malvorlagen",
+      "unicornCategory": "Einhorn-Malvorlagen",
+      "countSuffix": "Malvorlagen",
+      "countSuffixSingular": "Malvorlage"
+    },
+    "create": {
+      "title": "Erstellen Sie Ihre eigenen Schmetterling-Malvorlagen",
+      "subtitle": "Nutzen Sie unseren KI-gestützten Generator, um einzigartige, maßgeschneiderte Schmetterling-Malvorlagen aus Ihren Textbeschreibungen zu erstellen. Beschreiben Sie einfach das gewünschte Schmetterlingsdesign und sehen Sie zu, wie unser System Ihre Worte in wunderschöne, zum Ausmalen geeignete Strichzeichnungen verwandelt.",
+      "feature1": "Unbegrenzte Möglichkeiten für Schmetterlingsdesigns mit einfachen Textanweisungen",
+      "feature2": "Hochwertige Schwarz-Weiß-Schmetterlingszeichnungen, optimiert zum Ausmalen",
+      "feature3": "Sofortiger Download Ihrer Schmetterlingskreationen zum Ausdrucken",
+      "button": "Schmetterling-Malvorlage erstellen",
+      "promptExample": "Ein schöner Monarchfalter mit detaillierten Flügeln in einem Blumengarten",
+      "promptLabel": "Ihre Anweisung:",
+      "generatedImageLabel": "Generiertes Bild:"
+    },
+    "features": {
+      "title": "Warum unsere Schmetterling-Malvorlagen wählen",
+      "subtitle": "Entdecken Sie die Vorteile, die unsere Schmetterling-Malvorlagen zur perfekten Wahl für Ausmalbegeisterte jeden Alters machen.",
+      "ai": {
+        "title": "KI-generierte Designs",
+        "description": "Erstellen Sie maßgeschneiderte Schmetterling-Malvorlagen mit unserer KI-Technologie, die Ihre Ideen in wunderschöne Strichzeichnungen verwandelt."
+      },
+      "forAll": {
+        "title": "Für alle Altersgruppen",
+        "description": "Unsere Schmetterlingskollektion umfasst Designs für jeden, von einfachen Mustern für Kinder bis hin zu komplexer Schmetterlingskunst für Erwachsene."
+      },
+      "free": {
+        "title": "Kostenlos zum Herunterladen",
+        "description": "Alle unsere Schmetterling-Malvorlagen sind kostenlos zum Herunterladen, Ausdrucken und Genießen. Keine Abonnements oder versteckten Gebühren."
+      }
+    },
+    "testimonials": {
+      "title": "Was unsere Schmetterling-Ausmaler sagen",
+      "subtitle": "Hören Sie von Menschen, die unsere Schmetterling-Malvorlagen genutzt haben, um ihre Kreativität zu entfalten und Momente der Ruhe zu finden.",
+      "reviews": [
+        {
+          "name": "Emily Parker",
+          "role": "Elternteil",
+          "comment": "Die Schmetterling-Malvorlagen sind großartig! Meine Kinder lieben die detaillierten Flügelmuster und wie sie ihre eigenen Schmetterlingsdesigns anpassen können."
+        },
+        {
+          "name": "Michael Johnson",
+          "role": "Kunstlehrer",
+          "comment": "Ich verwende diese Schmetterling-Malvorlagen in meinem Unterricht. Die Vielfalt der Designs hält meine Schüler bei Laune, und das Tool zur individuellen Erstellung ist perfekt für unsere thematischen Lektionen."
+        },
+        {
+          "name": "Sarah Thompson",
+          "role": "Hobbykünstlerin",
+          "comment": "Ich habe das Ausmalen von Schmetterlingen schon immer als Entspannung genossen. Diese Plattform bietet Schmetterlingsdesigns, die ich nirgendwo anders finden kann, und die Möglichkeit, eigene Seiten zu erstellen, ist unglaublich."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Bereit, Schmetterlinge auszumalen?",
+      "description": "Durchstöbern Sie unsere Sammlung kostenloser Schmetterling-Malvorlagen oder erstellen Sie Ihr eigenes Schmetterlingsdesign mit unserem KI-Generator.",
+      "browseButton": "Alle Malvorlagen ansehen",
+      "createButton": "Eigenen Schmetterling erstellen"
+    }
+  },
+  "coloringPages": {
+    "title": "Malvorlagen",
+    "subtitle": "Durchsuchen Sie unsere Sammlung kostenloser druckbarer Malvorlagen, sortiert nach Themen. Wir bieten eine Vielzahl von Designs für alle Altersgruppen und Schwierigkeitsgrade.",
+    "categories": {
+      "butterfly": {
+        "name": "Schmetterling-Malvorlagen",
+        "description": "Wunderschöne Schmetterlingsdesigns mit detaillierten Flügeln und Mustern"
+      },
+      "flower": {
+        "name": "Blumen-Malvorlagen",
+        "description": "Herrliche Blumendesigns mit Rosen, Gänseblümchen, Tulpen und mehr"
+      },
+      "dragon": {
+        "name": "Drachen-Malvorlagen",
+        "description": "Mythische Drachendesigns mit Schuppen, Flügeln und feuerspeiender Action"
+      },
+      "unicorn": {
+        "name": "Einhorn-Malvorlagen",
+        "description": "Magische Einhorndesigns mit Regenbögen, Sternen und verzauberten Szenen"
+      },
+      "viewAll": "Alle ansehen",
+      "pageSuffix": "Seiten",
+      "pageSuffixSingular": "Seite"
+    },
+    "about": {
+      "title": "Über unsere Malvorlagen",
+      "paragraph1": "Unsere Malvorlagen sind darauf ausgelegt, ein entspannendes und kreatives Erlebnis für Menschen jeden Alters zu bieten. Jede Kategorie enthält sorgfältig gestaltete Schwarz-Weiß-Designs, die perfekt zum Ausmalen mit Buntstiften, Markern, Wachsmalstiften oder sogar digitalen Werkzeugen geeignet sind.",
+      "paragraph2": "Ob Sie einfache Designs für kleine Kinder oder komplexe Muster für Erwachsene suchen, unsere vielfältige Sammlung bietet etwas für jeden. Das Ausmalen macht nicht nur Spaß, sondern bietet auch zahlreiche Vorteile wie Stressabbau, verbesserte Konzentration und gesteigerte Kreativität.",
+      "paragraph3": "Alle unsere Malvorlagen sind völlig kostenlos zum Herunterladen und Ausdrucken. Wir aktualisieren unsere Sammlung regelmäßig mit neuen Designs, schauen Sie also öfter vorbei, um die neuesten Ergänzungen zu entdecken!"
+    }
+  },
+  "create": {
+    "title": "Malvorlage erstellen",
+    "prompt": {
+      "label": "Anweisung",
+      "placeholder": "Geben Sie eine Anweisung ein, die das zu erstellende Bild beschreibt...",
+      "helper": "Beschreiben Sie detailliert die Malvorlage, die Sie generieren möchten."
+    },
+    "size": {
+      "label": "Größe",
+      "option1": "768*1024",
+      "option2": "1024*1024",
+      "option3": "1024*768"
+    },
+    "generateButton": "Malvorlage generieren",
+    "submitting": "Wird übermittelt...",
+    "generating": "Bild wird generiert...",
+    "preview": {
+      "title": "Bildvorschau",
+      "subtitle": "Ihre generierte Malvorlage erscheint hier",
+      "loading": "Bild wird generiert, bitte warten...",
+      "error": "Fehler",
+      "downloadButton": "Herunterladen",
+      "tryAgainButton": "Erneut versuchen"
+    }
+  },
+  "about": {
+    "title": "Über Schmetterling-Malvorlagen",
+    "intro": "Willkommen bei Schmetterling-Malvorlagen, Ihrer Anlaufstelle für hochwertige, druckbare Schmetterlingsmalvorlagen. Unsere Plattform kombiniert traditionelle Malvorlagenkuration mit modernster KI-Technologie, um eine umfangreiche Bibliothek an Schwarz-Weiß-Schmetterlingskunstwerken für alle Altersgruppen anzubieten.",
+    "mission": {
+      "title": "Unsere Mission",
+      "description": "Wir glauben an den therapeutischen und pädagogischen Wert des Ausmalens. Unsere Mission ist es, zugängliche, vielfältige und hochwertige Ausmalressourcen bereitzustellen, die Kreativität und Achtsamkeit für Menschen jeden Alters fördern."
+    },
+    "howItWorks": {
+      "title": "Wie es funktioniert",
+      "description": "Unsere Plattform bietet zwei Hauptwege, um Malvorlagen zu genießen:",
+      "browse": "Malvorlagen durchsuchen",
+      "browseDescription": "Erkunden Sie unsere kuratierte Sammlung von Malvorlagen, sortiert nach Themen, Schwierigkeitsgraden und Altersgruppen.",
+      "create": "Eigene Seiten erstellen",
+      "createDescription": "Verwenden Sie unseren KI-gestützten Generator, um einzigartige Malvorlagen basierend auf Ihren Textbeschreibungen zu erstellen. Geben Sie einfach ein, was Sie sehen möchten, und unser System erstellt eine zum Ausmalen geeignete Schwarz-Weiß-Strichzeichnung."
+    },
+    "technology": {
+      "title": "Technologie",
+      "description": "Schmetterling-Malvorlagen verwendet fortschrittliche KI-Bildgenerierungstechnologie, um maßgeschneiderte Schmetterling-Malvorlagen zu erstellen. Unser System wurde speziell entwickelt, um Schwarz-Weiß-Strichzeichnungen zu produzieren, die perfekt zum Ausmalen geeignet sind, mit angemessenem Detailgrad und klaren Umrissen."
+    },
+    "contact": {
+      "title": "Kontaktieren Sie uns",
+      "description": "Haben Sie Fragen, Anregungen oder Feedback? Wir würden uns freuen, von Ihnen zu hören! Bitte besuchen Sie unsere Kontaktseite, um mit unserem Team in Verbindung zu treten."
+    }
+  },
+  "terms": {
+    "title": "Nutzungsbedingungen",
+    "lastUpdated": "Zuletzt aktualisiert:",
+    "intro": "Willkommen bei Schmetterling-Malvorlagen. Durch den Zugriff auf oder die Nutzung unserer Website erklären Sie sich mit diesen Nutzungsbedingungen (\"Bedingungen\") einverstanden. Bitte lesen Sie diese Bedingungen sorgfältig durch. Wenn Sie mit diesen Bedingungen nicht einverstanden sind, nutzen Sie bitte unsere Website nicht.",
+    "websageUsage": {
+      "title": "Website-Nutzung",
+      "description": "Schmetterling-Malvorlagen bietet Malvorlagen zum Download und zur Erstellung an. Sie dürfen:",
+      "item1": "Die von uns bereitgestellten Malvorlagen-Ressourcen durchsuchen und herunterladen",
+      "item2": "Unsere KI-Tools zur Erstellung eigener Malvorlagen nutzen",
+      "item3": "Diese Malvorlagen ausdrucken und persönlich verwenden"
+    },
+    "userAccounts": {
+      "title": "Benutzerkonten",
+      "description": "Für einige Funktionen kann die Erstellung eines Benutzerkontos erforderlich sein. Wenn Sie ein Konto erstellen, sind Sie verantwortlich für:",
+      "item1": "Die Aufrechterhaltung der Sicherheit und Vertraulichkeit Ihres Kontos",
+      "item2": "Alle Aktivitäten, die unter Ihrem Konto stattfinden",
+      "item3": "Die Aktualität Ihrer Kontoinformationen",
+      "note": "Wir behalten uns das Recht vor, den Service zu verweigern, Konten zu kündigen oder Inhalte nach eigenem Ermessen zu entfernen oder zu bearbeiten."
+    },
+    "intellectualProperty": {
+      "title": "Geistiges Eigentum",
+      "ourContent": "Unsere Inhalte: Alle Inhalte auf der Website, einschließlich, aber nicht beschränkt auf Designs, Texte, Grafiken, Bilder, Malvorlagen-Vorlagen usw. (mit Ausnahme von nutzergenerierten Inhalten), sind Eigentum von Schmetterling-Malvorlagen und seinen Lizenzgebern und durch Urheberrechte und andere Gesetze zum Schutz des geistigen Eigentums geschützt.",
+      "userContent": "Nutzergenerierte Inhalte: Für mit unseren KI-Tools erstellte benutzerdefinierte Malvorlagen behalten Sie das Eigentum an den von Ihnen erstellten Inhalten. Sie gewähren uns jedoch eine weltweite, nicht-exklusive, gebührenfreie Lizenz zur Nutzung, Reproduktion, Modifikation, Veröffentlichung und Anzeige der von Ihnen erstellten Inhalte zum Zwecke des Betriebs und der Verbesserung unserer Dienste.",
+      "restrictions": {
+        "title": "Nutzungsbeschränkungen",
+        "description": "Sie dürfen nicht:",
+        "item1": "Unsere Website-Inhalte für kommerzielle Zwecke kopieren, modifizieren oder abgeleitete Werke erstellen",
+        "item2": "Urheberrechts- oder andere Eigentumshinweise von unserer Website entfernen",
+        "item3": "Unsere Inhalte weiterverkaufen, unterlizenzieren oder anderweitig kommerzialisieren"
+      }
+    },
+    "contact": {
+      "title": "Kontaktieren Sie uns",
+      "description": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, kontaktieren Sie uns bitte über unsere Kontaktseite."
+    }
+  },
+  "privacy": {
+    "title": "Datenschutzrichtlinie",
+    "lastUpdated": "Zuletzt aktualisiert:",
+    "intro": "Willkommen bei Schmetterling-Malvorlagen. Wir verpflichten uns, Ihre Privatsphäre und persönlichen Daten zu schützen. Diese Datenschutzrichtlinie beschreibt, wie wir die Informationen, die Sie bei der Nutzung unserer Website bereitstellen, sammeln, verwenden, offenlegen und schützen.",
+    "infoCollect": {
+      "title": "Informationen, die wir sammeln",
+      "personal": "Persönliche Informationen: Wenn Sie unsere Website nutzen, können wir folgende persönliche Informationen sammeln:",
+      "item1": "Informationen, die Sie uns zur Verfügung stellen, wie Ihren Namen und Ihre E-Mail-Adresse (z.B. bei Kontaktaufnahme oder Registrierung)",
+      "item2": "Technische Informationen über Ihr Gerät, wie IP-Adresse, Browser-Typ und Betriebssystem",
+      "item3": "Informationen über Ihre Interaktionen mit unserer Website, wie Browserverlauf und Zugriffszeiten"
+    },
+    "infoUse": {
+      "title": "Wie wir Ihre Informationen verwenden",
+      "description": "Wir verwenden die gesammelten Informationen, um:",
+      "item1": "Unsere Dienste bereitzustellen, zu pflegen und zu verbessern",
+      "item2": "Auf Ihre Anfragen und Wünsche zu reagieren",
+      "item3": "Ihnen Benachrichtigungen und Updates zu unseren Diensten zu senden",
+      "item4": "Die Website-Nutzung und Trends zu überwachen und zu analysieren",
+      "item5": "Betrügerische Aktivitäten zu verhindern und die Website-Sicherheit zu erhöhen"
+    },
+    "contact": {
+      "title": "Kontaktieren Sie uns",
+      "description": "Wenn Sie Fragen oder Bedenken zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns bitte über unsere Kontaktseite."
+    }
+  },
+  "footer": {
+    "resources": "Ressourcen",
+    "contact": "Kontakt",
+    "contactText": "Fragen oder Feedback? Wir würden uns freuen, von Ihnen zu hören.",
+    "friendlyLinks": "Freundliche Links",
+    "copyright": "© 2024 Butterfly Coloring Pages. Alle Rechte vorbehalten.",
+    "terms": "Nutzungsbedingungen",
+    "privacy": "Datenschutz"
+  }
+}

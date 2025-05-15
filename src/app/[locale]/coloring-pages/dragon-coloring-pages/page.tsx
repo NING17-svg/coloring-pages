@@ -3,6 +3,7 @@ import { LayoutContainer } from '@/components/layout/layout-container';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getCategoryData } from '@/lib/coloring-data';
+import { unstable_setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: 'Dragon Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com',
@@ -14,7 +15,14 @@ export const metadata: Metadata = {
   }
 };
 
-export default function DragonColoringPages() {
+export default function DragonColoringPages({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  // 设置国际化的区域
+  unstable_setRequestLocale(params.locale);
+
   // 获取龙分类数据
   const categoryData = getCategoryData('dragon-coloring-pages');
   const images = categoryData?.images || [];
@@ -25,14 +33,14 @@ export default function DragonColoringPages() {
         <div className="container px-4 mx-auto">
           <h1 className="text-4xl font-bold mb-4">Dragon Coloring Pages</h1>
           <p className="text-gray-600 max-w-3xl mb-8">
-            Explore our collection of free printable dragon coloring pages. Perfect for fantasy lovers of all ages, featuring majestic dragons with detailed scales, wings, and fire-breathing action.
+            Explore our collection of free printable dragon coloring pages. Perfect for kids and adults who love these mythical creatures with their scales, wings, and fire-breathing abilities.
           </p>
           
           {/* Gallery of dragon coloring pages */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
             {images.length > 0 ? (
               images.map((image, i) => (
-                <Link href={`/coloring-pages/dragon-coloring-pages/${image.id}`} key={i} className="group">
+                <Link href={`/${params.locale}/coloring-pages/dragon-coloring-pages/${image.id}`} key={i} className="group">
                   <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md">
                     <div className="aspect-video bg-gray-100 relative">
                       <Image 

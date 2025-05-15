@@ -3,6 +3,7 @@ import { LayoutContainer } from '@/components/layout/layout-container';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getCategoryData } from '@/lib/coloring-data';
+import { unstable_setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: 'Unicorn Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com',
@@ -14,7 +15,14 @@ export const metadata: Metadata = {
   }
 };
 
-export default function UnicornColoringPages() {
+export default function UnicornColoringPages({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  // 设置国际化的区域
+  unstable_setRequestLocale(params.locale);
+
   // 获取独角兽分类数据
   const categoryData = getCategoryData('unicorn-coloring-pages');
   const images = categoryData?.images || [];
@@ -25,14 +33,14 @@ export default function UnicornColoringPages() {
         <div className="container px-4 mx-auto">
           <h1 className="text-4xl font-bold mb-4">Unicorn Coloring Pages</h1>
           <p className="text-gray-600 max-w-3xl mb-8">
-            Explore our collection of free printable unicorn coloring pages. Perfect for bringing magical fantasy to life with beautiful unicorns, rainbows, and enchanted scenes for colorists of all ages.
+            Explore our collection of free printable unicorn coloring pages. Perfect for kids and adults who love these magical creatures with their flowing manes and mystical horns.
           </p>
           
           {/* Gallery of unicorn coloring pages */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
             {images.length > 0 ? (
               images.map((image, i) => (
-                <Link href={`/coloring-pages/unicorn-coloring-pages/${image.id}`} key={i} className="group">
+                <Link href={`/${params.locale}/coloring-pages/unicorn-coloring-pages/${image.id}`} key={i} className="group">
                   <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md">
                     <div className="aspect-video bg-gray-100 relative">
                       <Image 

@@ -1,0 +1,233 @@
+{
+  "site": {
+    "title": "Butterfly Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com",
+    "description": "Download beautiful butterfly coloring pages for free. Create custom butterfly designs with our AI or browse our curated collection for kids and adults. Print & enjoy!"
+  },
+  "navigation": {
+    "home": "Home",
+    "categories": "Coloring Pages",
+    "create": "Create",
+    "about": "About"
+  },
+  "home": {
+    "hero": {
+      "title": "Beautiful Butterfly Coloring Pages For Everyone",
+      "subtitle": "Explore our collection of free, high-quality butterfly coloring pages or create your own custom designs with our AI technology.",
+      "browseButton": "Browse All Coloring Pages",
+      "createButton": "Create Your Own"
+    },
+    "categories": {
+      "title": "Browse Butterfly Coloring Pages by Themes",
+      "subtitle": "Explore our wide range of butterfly coloring pages organized by themes. Find the perfect butterfly design for any age and interest.",
+      "viewAll": "View All Coloring Pages",
+      "butterflyCategory": "Butterfly coloring pages",
+      "flowerCategory": "Flower coloring pages",
+      "dragonCategory": "Dragon coloring pages",
+      "unicornCategory": "Unicorn coloring pages",
+      "countSuffix": "coloring pages",
+      "countSuffixSingular": "coloring page"
+    },
+    "create": {
+      "title": "Create Your Own Butterfly Coloring Pages",
+      "subtitle": "Use our AI-powered generator to create unique, custom butterfly coloring pages from your text descriptions. Simply describe the butterfly design you want and watch our system transform your words into beautiful line art ready for coloring.",
+      "feature1": "Unlimited butterfly design possibilities with simple text prompts",
+      "feature2": "High-quality black and white butterfly drawings optimized for coloring",
+      "feature3": "Instantly download your butterfly creations for printing",
+      "button": "Create Butterfly Coloring Page",
+      "promptExample": "A beautiful monarch butterfly with detailed wings in a flower garden",
+      "promptLabel": "Your Prompt:",
+      "generatedImageLabel": "Generated Image:"
+    },
+    "features": {
+      "title": "Why Choose Our Butterfly Coloring Pages",
+      "subtitle": "Discover the benefits that make our butterfly coloring pages the perfect choice for coloring enthusiasts of all ages.",
+      "ai": {
+        "title": "AI Generated Designs",
+        "description": "Create custom butterfly coloring pages with our AI technology, transforming your ideas into beautiful line art."
+      },
+      "forAll": {
+        "title": "For All Ages",
+        "description": "Our butterfly collection includes designs for everyone, from simple patterns for kids to complex butterfly art for adults."
+      },
+      "free": {
+        "title": "Free to Download",
+        "description": "All our butterfly coloring pages are free to download, print, and enjoy. No subscriptions or hidden fees."
+      }
+    },
+    "testimonials": {
+      "title": "What Our Butterfly Colorers Say",
+      "subtitle": "Hear from people who've used our butterfly coloring pages to unleash their creativity and find moments of calm.",
+      "reviews": [
+        {
+          "name": "Emily Parker",
+          "role": "Parent",
+          "comment": "The butterfly coloring pages are fantastic! My kids love the detailed wing patterns and how they can customize their own butterfly designs."
+        },
+        {
+          "name": "Michael Johnson",
+          "role": "Art Teacher",
+          "comment": "I use these butterfly coloring pages in my classes. The variety of designs keeps my students engaged, and the custom creation tool is perfect for our themed lessons."
+        },
+        {
+          "name": "Sarah Thompson",
+          "role": "Hobby Artist",
+          "comment": "I've always found coloring butterflies relaxing. This platform offers butterfly designs I can't find anywhere else, and the ability to create custom pages is incredible."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Color Butterflies?",
+      "description": "Browse our collection of free butterfly coloring pages or create your own butterfly design with our AI generator.",
+      "browseButton": "Browse All Coloring Pages",
+      "createButton": "Create Your Own Butterfly"
+    }
+  },
+  "coloringPages": {
+    "title": "Coloring Pages",
+    "subtitle": "Browse our collection of free printable coloring pages organized by themes. We offer a variety of designs for all ages and skill levels.",
+    "categories": {
+      "butterfly": {
+        "name": "Butterfly Coloring Pages",
+        "description": "Beautiful butterfly designs with detailed wings and patterns"
+      },
+      "flower": {
+        "name": "Flower Coloring Pages",
+        "description": "Gorgeous floral designs featuring roses, daisies, tulips and more"
+      },
+      "dragon": {
+        "name": "Dragon Coloring Pages",
+        "description": "Mythical dragon designs with scales, wings and fire-breathing action"
+      },
+      "unicorn": {
+        "name": "Unicorn Coloring Pages",
+        "description": "Magical unicorn designs with rainbows, stars and enchanted scenes"
+      },
+      "viewAll": "View all",
+      "pageSuffix": "pages",
+      "pageSuffixSingular": "page"
+    },
+    "about": {
+      "title": "About Our Coloring Pages",
+      "paragraph1": "Our coloring pages are designed to provide a relaxing and creative experience for people of all ages. Each category features carefully crafted black and white designs that are perfect for coloring with colored pencils, markers, crayons, or even digital tools.",
+      "paragraph2": "Whether you're looking for simple designs for young children or intricate patterns for adults, our diverse collection has something for everyone. Coloring is not just fun but also offers numerous benefits including stress relief, improved focus, and enhanced creativity.",
+      "paragraph3": "All of our coloring pages are completely free to download and print. We regularly update our collection with new designs, so be sure to check back often for the latest additions!"
+    }
+  },
+  "create": {
+    "title": "Create Coloring Page",
+    "prompt": {
+      "label": "Prompt",
+      "placeholder": "Enter a prompt describing the image you want to generate...",
+      "helper": "Describe in detail the coloring page you want to generate."
+    },
+    "size": {
+      "label": "Size",
+      "option1": "768*1024",
+      "option2": "1024*1024",
+      "option3": "1024*768"
+    },
+    "generateButton": "Generate Coloring Page",
+    "submitting": "Submitting...",
+    "generating": "Generating Image...",
+    "preview": {
+      "title": "Image Preview",
+      "subtitle": "Your generated coloring page will appear here",
+      "loading": "Generating image, please wait...",
+      "error": "Error",
+      "downloadButton": "Download",
+      "tryAgainButton": "Try Again"
+    }
+  },
+  "about": {
+    "title": "About Butterfly Coloring Pages",
+    "intro": "Welcome to Butterfly Coloring Pages, your go-to destination for high-quality, printable butterfly coloring pages. Our platform combines traditional coloring page curation with cutting-edge AI technology to offer an extensive library of black and white butterfly artwork suitable for all ages.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "We believe in the therapeutic and educational value of coloring. Our mission is to provide accessible, diverse, and high-quality coloring resources that inspire creativity and mindfulness for people of all ages."
+    },
+    "howItWorks": {
+      "title": "How It Works",
+      "description": "Our platform offers two main ways to enjoy coloring pages:",
+      "browse": "Browse Coloring Pages: Explore our curated collection of coloring pages organized by themes, difficulty levels, and age groups.",
+      "create": "Create Custom Pages: Use our AI-powered generator to create unique coloring pages based on your text descriptions. Simply type what you want to see, and our system will create a black and white line drawing ready for coloring."
+    },
+    "technology": {
+      "title": "Technology",
+      "description": "Butterfly Coloring Pages uses advanced AI image generation technology to create custom butterfly coloring pages. Our system has been specially designed to produce black and white line drawings that are perfect for coloring, with appropriate level of detail and clear outlines."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Have questions, suggestions, or feedback? We'd love to hear from you! Please visit our contact page to get in touch with our team."
+    }
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last Updated:",
+    "intro": "Welcome to Butterfly Coloring Pages. By accessing or using our website, you agree to be bound by these Terms of Service (\"Terms\"). Please read these Terms carefully. If you do not agree to these Terms, please do not use our website.",
+    "websageUsage": {
+      "title": "Website Usage",
+      "description": "Butterfly Coloring Pages provides coloring page download and creation services. You may:",
+      "item1": "Browse and download coloring page resources we provide",
+      "item2": "Use our AI tools to create custom coloring pages",
+      "item3": "Print and personally use these coloring pages"
+    },
+    "userAccounts": {
+      "title": "User Accounts",
+      "description": "Some features may require creating a user account. If you create an account, you are responsible for:",
+      "item1": "Maintaining the security and confidentiality of your account",
+      "item2": "All activities that occur under your account",
+      "item3": "Keeping your account information up to date",
+      "note": "We reserve the right to refuse service, terminate accounts, or remove or edit content at our sole discretion."
+    },
+    "intellectualProperty": {
+      "title": "Intellectual Property",
+      "ourContent": "Our Content: All content on the website, including but not limited to designs, text, graphics, images, coloring page templates, etc. (except for user-generated content), is the property of Butterfly Coloring Pages and its licensors, and is protected by copyright and other intellectual property laws.",
+      "userContent": "User-Generated Content: For custom coloring pages created using our AI tools, you retain ownership of the content you create. However, you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, publish, and display the content you create for the purpose of operating and improving our services.",
+      "restrictions": {
+        "title": "Usage Restrictions",
+        "description": "You may not:",
+        "item1": "Copy, modify, or create derivative works of our website content for commercial purposes",
+        "item2": "Remove any copyright or other proprietary notices from our website",
+        "item3": "Resell, sublicense, or otherwise commercialize our content"
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "If you have any questions about these Terms of Service, please contact us through our contact page."
+    }
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated:",
+    "intro": "Welcome to Butterfly Coloring Pages. We are committed to protecting your privacy and personal information. This Privacy Policy describes how we collect, use, disclose, and protect the information you provide when using our website.",
+    "infoCollect": {
+      "title": "Information We Collect",
+      "personal": "Personal Information: When you use our website, we may collect the following personal information:",
+      "item1": "Information you provide to us, such as your name and email address (e.g., when contacting us or registering)",
+      "item2": "Technical information about your device, such as IP address, browser type, and operating system",
+      "item3": "Information about your interactions with our website, such as browsing history and access times"
+    },
+    "infoUse": {
+      "title": "How We Use Your Information",
+      "description": "We use the information we collect to:",
+      "item1": "Provide, maintain, and improve our services",
+      "item2": "Respond to your inquiries and requests",
+      "item3": "Send you notifications and updates related to our services",
+      "item4": "Monitor and analyze website usage and trends",
+      "item5": "Prevent fraudulent activities and enhance website security"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "If you have any questions or concerns about this Privacy Policy, please contact us through our contact page."
+    }
+  },
+  "footer": {
+    "resources": "Resources",
+    "contact": "Contact",
+    "contactText": "Questions or feedback? We'd love to hear from you.",
+    "friendlyLinks": "Friendly Links",
+    "copyright": "© 2024 Butterfly Coloring Pages. All rights reserved.",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy"
+  }
+}

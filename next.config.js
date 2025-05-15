@@ -1,10 +1,19 @@
- /** @type {import('next').NextConfig} */
+const createNextIntlPlugin = require('next-intl/plugin');
+
+const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
     eslint: {
       ignoreDuringBuilds: true, // 禁用构建时的ESLint检查
     },
     typescript: {
       ignoreBuildErrors: true, // 禁用构建时的TypeScript类型检查
+    },
+    // 环境变量
+    env: {
+      NEXT_TELEMETRY_DISABLED: '1',
+      NEXT_DISABLE_VERSION_CHECK: '1'
     },
     // 优化图片配置
     images: {
@@ -20,6 +29,6 @@ const nextConfig = {
     assetPrefix: '',
     // 提高构建输出的详细程度
     output: 'standalone'
-  };
+};
   
-  module.exports = nextConfig;
+module.exports = withNextIntl(nextConfig);

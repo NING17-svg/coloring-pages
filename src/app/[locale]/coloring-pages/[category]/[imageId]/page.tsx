@@ -6,12 +6,13 @@ import { LayoutContainer } from '@/components/layout/layout-container';
 import { Button } from '@/components/ui/button';
 import { Download, ArrowLeft, Share2 } from 'lucide-react';
 import { getImageData, getCategoryData, getRelatedImages, getAllImagePaths } from '@/lib/coloring-data';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 // Generate dynamic metadata
 export async function generateMetadata({ 
   params 
 }: { 
-  params: { category: string; imageId: string } 
+  params: { locale: string; category: string; imageId: string } 
 }): Promise<Metadata> {
   const image = getImageData(params.category, params.imageId);
   
@@ -28,7 +29,7 @@ export async function generateMetadata({
     keywords: image.tags,
     robots: 'index, follow',
     alternates: {
-      canonical: `https://butterfly-coloring-pages.com/coloring-pages/${params.category}/${params.imageId}`
+      canonical: `https://butterfly-coloring-pages.com/${params.locale}/coloring-pages/${params.category}/${params.imageId}`
     }
   };
 }
@@ -42,8 +43,11 @@ export function generateStaticParams() {
 export default function ColoringImagePage({ 
   params 
 }: { 
-  params: { category: string; imageId: string } 
+  params: { locale: string; category: string; imageId: string } 
 }) {
+  // 设置国际化的区域
+  unstable_setRequestLocale(params.locale);
+  
   const image = getImageData(params.category, params.imageId);
   const categoryData = getCategoryData(params.category);
   const relatedImages = getRelatedImages(params.category, params.imageId, 4);
@@ -80,15 +84,15 @@ export default function ColoringImagePage({
         <div className="container mx-auto px-4">
           {/* Breadcrumb navigation */}
           <div className="flex items-center mb-6 text-sm">
-            <Link href="/" className="text-gray-500 hover:text-primary transition-colors">
+            <Link href={`/${params.locale}`} className="text-gray-500 hover:text-primary transition-colors">
               Home
             </Link>
             <span className="mx-2 text-gray-400">/</span>
-            <Link href="/coloring-pages" className="text-gray-500 hover:text-primary transition-colors">
+            <Link href={`/${params.locale}/coloring-pages`} className="text-gray-500 hover:text-primary transition-colors">
               Coloring Pages
             </Link>
             <span className="mx-2 text-gray-400">/</span>
-            <Link href={`/coloring-pages/${params.category}`} className="text-gray-500 hover:text-primary transition-colors">
+            <Link href={`/${params.locale}/coloring-pages/${params.category}`} className="text-gray-500 hover:text-primary transition-colors">
               {categoryData.title}
             </Link>
             <span className="mx-2 text-gray-400">/</span>
@@ -151,7 +155,7 @@ export default function ColoringImagePage({
                     {image.tags.map((tag, index) => (
                       <Link
                         key={index}
-                        href={`/coloring-pages?tag=${tag}`}
+                        href={`/${params.locale}/coloring-pages?tag=${tag}`}
                         className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full hover:bg-gray-200 transition-colors"
                       >
                         {tag}
@@ -168,7 +172,7 @@ export default function ColoringImagePage({
                     </Link>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="w-full">
-                    <Link href={`/coloring-pages/${params.category}`}>
+                    <Link href={`/${params.locale}/coloring-pages/${params.category}`}>
                       <ArrowLeft className="mr-2 h-4 w-4" /> More {categoryData.title}
                     </Link>
                   </Button>
@@ -184,7 +188,7 @@ export default function ColoringImagePage({
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {relatedImages.map((relatedImage, index) => (
                   <Link 
-                    href={`/coloring-pages/${params.category}/${relatedImage.id}`} 
+                    href={`/${params.locale}/coloring-pages/${params.category}/${relatedImage.id}`} 
                     key={index}
                     className="group"
                   >

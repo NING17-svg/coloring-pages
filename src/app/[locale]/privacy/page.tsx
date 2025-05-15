@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 import { LayoutContainer } from '@/components/layout/layout-container';
 
 export const metadata: Metadata = {
@@ -6,44 +7,46 @@ export const metadata: Metadata = {
   description: 'Learn how Butterfly Coloring Pages collects, uses, and protects your personal information, and your privacy rights when using our services.',
 };
 
-export default function PrivacyPage() {
+export default async function PrivacyPage() {
+  const t = await getTranslations('privacy');
+  const today = new Date().toISOString().split('T')[0];
+  
   return (
     <LayoutContainer>
       <section className="py-12">
         <div className="container px-4 mx-auto">
           <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
+            <h1 className="text-4xl font-bold mb-8">{t('title')}</h1>
             
             <div className="prose prose-lg max-w-none">
               <p>
-                Last Updated: {new Date().toISOString().split('T')[0]}
+                {t('lastUpdated')} {today}
               </p>
               
               <p>
-                Welcome to Butterfly Coloring Pages. We are committed to protecting your privacy and personal information.
-                This Privacy Policy describes how we collect, use, disclose, and protect the information you provide when using our website.
+                {t('intro')}
               </p>
               
-              <h2>Information We Collect</h2>
+              <h2>{t('infoCollect.title')}</h2>
               <p>
-                <strong>Personal Information</strong>: When you use our website, we may collect the following personal information:
+                <strong>{t('infoCollect.personal')}</strong>:
               </p>
               <ul>
-                <li>Information you provide to us, such as your name and email address (e.g., when contacting us or registering)</li>
-                <li>Technical information about your device, such as IP address, browser type, and operating system</li>
-                <li>Information about your interactions with our website, such as browsing history and access times</li>
+                <li>{t('infoCollect.item1')}</li>
+                <li>{t('infoCollect.item2')}</li>
+                <li>{t('infoCollect.item3')}</li>
               </ul>
               
-              <h2>How We Use Your Information</h2>
+              <h2>{t('infoUse.title')}</h2>
               <p>
-                We use the information we collect to:
+                {t('infoUse.description')}
               </p>
               <ul>
-                <li>Provide, maintain, and improve our services</li>
-                <li>Respond to your inquiries and requests</li>
-                <li>Send you notifications and updates related to our services</li>
-                <li>Monitor and analyze website usage and trends</li>
-                <li>Prevent fraudulent activities and enhance website security</li>
+                <li>{t('infoUse.item1')}</li>
+                <li>{t('infoUse.item2')}</li>
+                <li>{t('infoUse.item3')}</li>
+                <li>{t('infoUse.item4')}</li>
+                <li>{t('infoUse.item5')}</li>
               </ul>
               
               <h2>Cookies and Similar Technologies</h2>
@@ -90,7 +93,7 @@ export default function PrivacyPage() {
                 <li>Data portability</li>
               </ul>
               <p>
-                To exercise these rights, please contact us through our <a href="/contact" className="text-primary hover:underline">contact page</a>.
+                To exercise these rights, please contact us through our contact page.
               </p>
               
               <h2>Security</h2>
@@ -105,10 +108,8 @@ export default function PrivacyPage() {
                 We encourage you to review this policy periodically to stay informed about how we are protecting your information.
               </p>
               
-              <h2>Contact Us</h2>
-              <p>
-                If you have any questions or concerns about this Privacy Policy, please contact us through our <a href="/contact" className="text-primary hover:underline">contact page</a>.
-              </p>
+              <h2>{t('contact.title')}</h2>
+              <p dangerouslySetInnerHTML={{ __html: t.raw('contact.description') }} />
             </div>
           </div>
         </div>

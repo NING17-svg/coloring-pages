@@ -3,6 +3,7 @@ import { LayoutContainer } from '@/components/layout/layout-container';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getCategoryData } from '@/lib/coloring-data';
+import { unstable_setRequestLocale } from "next-intl/server";
 
 export const metadata: Metadata = {
   title: 'Butterfly Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com',
@@ -14,7 +15,14 @@ export const metadata: Metadata = {
   }
 };
 
-export default function ButterflyColoringPages() {
+export default function ButterflyColoringPages({
+  params,
+}: {
+  params: { locale: string };
+}) {
+  // 设置国际化的区域
+  unstable_setRequestLocale(params.locale);
+
   // 获取蝴蝶分类数据
   const categoryData = getCategoryData('butterfly-coloring-pages');
   const images = categoryData?.images || [];
@@ -31,7 +39,7 @@ export default function ButterflyColoringPages() {
           {/* Gallery of butterfly coloring pages */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
             {images.map((image, i) => (
-              <Link href={`/coloring-pages/butterfly-coloring-pages/${image.id}`} key={i} className="group">
+              <Link href={`/${params.locale}/coloring-pages/butterfly-coloring-pages/${image.id}`} key={i} className="group">
                 <div className="bg-gray-50 rounded-lg overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md">
                   <div className="aspect-video bg-gray-100 relative">
                     <Image 

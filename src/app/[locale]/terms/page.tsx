@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
 import { LayoutContainer } from '@/components/layout/layout-container';
 
 export const metadata: Metadata = {
@@ -6,64 +7,63 @@ export const metadata: Metadata = {
   description: 'Understand the terms, rules, and limitations of using Butterfly Coloring Pages, as well as your responsibilities when using our website.',
 };
 
-export default function TermsPage() {
+export default async function TermsPage() {
+  const t = await getTranslations('terms');
+  const today = new Date().toISOString().split('T')[0];
+  
   return (
     <LayoutContainer>
       <section className="py-12">
         <div className="container px-4 mx-auto">
           <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl font-bold mb-8">Terms of Service</h1>
+            <h1 className="text-4xl font-bold mb-8">{t('title')}</h1>
             
             <div className="prose prose-lg max-w-none">
               <p>
-                Last Updated: {new Date().toISOString().split('T')[0]}
+                {t('lastUpdated')} {today}
               </p>
               
               <p>
-                Welcome to Butterfly Coloring Pages. By accessing or using our website, you agree to be bound by these Terms of Service ("Terms"). 
-                Please read these Terms carefully. If you do not agree to these Terms, please do not use our website.
+                {t('intro')}
               </p>
               
-              <h2>Website Usage</h2>
+              <h2>{t('websageUsage.title')}</h2>
               <p>
-                Butterfly Coloring Pages provides coloring page download and creation services. You may:
+                {t('websageUsage.description')}
               </p>
               <ul>
-                <li>Browse and download coloring page resources we provide</li>
-                <li>Use our AI tools to create custom coloring pages</li>
-                <li>Print and personally use these coloring pages</li>
+                <li>{t('websageUsage.item1')}</li>
+                <li>{t('websageUsage.item2')}</li>
+                <li>{t('websageUsage.item3')}</li>
               </ul>
               
-              <h2>User Accounts</h2>
+              <h2>{t('userAccounts.title')}</h2>
               <p>
-                Some features may require creating a user account. If you create an account, you are responsible for:
+                {t('userAccounts.description')}
               </p>
               <ul>
-                <li>Maintaining the security and confidentiality of your account</li>
-                <li>All activities that occur under your account</li>
-                <li>Keeping your account information up to date</li>
+                <li>{t('userAccounts.item1')}</li>
+                <li>{t('userAccounts.item2')}</li>
+                <li>{t('userAccounts.item3')}</li>
               </ul>
               <p>
-                We reserve the right to refuse service, terminate accounts, or remove or edit content at our sole discretion.
+                {t('userAccounts.note')}
               </p>
               
-              <h2>Intellectual Property</h2>
+              <h2>{t('intellectualProperty.title')}</h2>
               <p>
-                <strong>Our Content</strong>: All content on the website, including but not limited to designs, text, graphics, images, coloring page templates, etc. (except for user-generated content), 
-                is the property of Butterfly Coloring Pages and its licensors, and is protected by copyright and other intellectual property laws.
+                <strong>{t('intellectualProperty.ourContent')}</strong>
               </p>
               <p>
-                <strong>User-Generated Content</strong>: For custom coloring pages created using our AI tools, you retain ownership of the content you create. 
-                However, you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, publish, and display the content you create 
-                for the purpose of operating and improving our services.
+                <strong>{t('intellectualProperty.userContent')}</strong>
               </p>
               <p>
-                <strong>Usage Restrictions</strong>: You may not:
+                <strong>{t('intellectualProperty.restrictions.title')}</strong>:
               </p>
               <ul>
-                <li>Copy, modify, or create derivative works of our website content for commercial purposes</li>
-                <li>Remove any copyright or other proprietary notices from our website</li>
-                <li>Resell, sublicense, or otherwise commercialize our content</li>
+                <li>{t('intellectualProperty.restrictions.item1')}</li>
+                <li>{t('intellectualProperty.restrictions.item2')}</li>
+                <li>{t('intellectualProperty.restrictions.item3')}</li>
               </ul>
               
               <h2>Prohibited Conduct</h2>
@@ -125,10 +125,8 @@ export default function TermsPage() {
                 These Terms are governed by the laws of the United States, without regard to its conflict of law principles.
               </p>
               
-              <h2>Contact Us</h2>
-              <p>
-                If you have any questions about these Terms of Service, please contact us through our <a href="/contact" className="text-primary hover:underline">contact page</a>.
-              </p>
+              <h2>{t('contact.title')}</h2>
+              <p dangerouslySetInnerHTML={{ __html: t.raw('contact.description') }} />
             </div>
           </div>
         </div>

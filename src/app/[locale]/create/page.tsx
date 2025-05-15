@@ -1,11 +1,17 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { Loader2, Download, X } from 'lucide-react';
 import { LayoutContainer } from '@/components/layout/layout-container';
+import Image from 'next/image';
+
+// 注意：这是一个客户端组件，不能使用unstable_setRequestLocale
+// 客户端组件会自动从上下文中获取locale参数
 
 export default function CreatePage() {
+  const t = useTranslations();
   const [prompt, setPrompt] = useState('');
   const [size, setSize] = useState('1024*1024');
   
@@ -148,33 +154,33 @@ export default function CreatePage() {
       <section className="py-12">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h1 className="text-3xl font-bold text-center mb-8">Create Coloring Page</h1>
+            <h1 className="text-3xl font-bold text-center mb-8">{t('create.title')}</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="border rounded-lg p-6 shadow-sm">
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label htmlFor="prompt" className="block text-sm font-medium mb-1">
-                      Prompt
+                      {t('create.prompt.label')}
                     </label>
                     <textarea
                       id="prompt"
                       value={prompt}
                       onChange={(e) => setPrompt(e.target.value)}
-                      placeholder="Enter a prompt describing the image you want to generate..."
+                      placeholder={t('create.prompt.placeholder')}
                       className="w-full p-2 border rounded-md"
                       rows={4}
                       required
                     />
                     <p className="text-xs text-gray-500 mt-1">
-                      Describe in detail the coloring page you want to generate.
+                      {t('create.prompt.helper')}
                     </p>
                   </div>
 
                   <div className="space-y-4">
                     <div>
                       <label className="flex items-center gap-1 text-sm font-medium mb-2">
-                        Size <span className="text-red-500">*</span>
+                        {t('create.size.label')} <span className="text-red-500">*</span>
                       </label>
                       <div className="grid grid-cols-3 gap-2">
                         <div 
@@ -183,7 +189,7 @@ export default function CreatePage() {
                         >
                           <div className="flex gap-2 items-center">
                             <div className="h-5 w-4 border border-gray-400"></div>
-                            <span>768*1024</span>
+                            <span>{t('create.size.option1')}</span>
                           </div>
                         </div>
                         
@@ -193,7 +199,7 @@ export default function CreatePage() {
                         >
                           <div className="flex gap-2 items-center">
                             <div className="h-4 w-4 border border-gray-400"></div>
-                            <span>1024*1024</span>
+                            <span>{t('create.size.option2')}</span>
                           </div>
                         </div>
                         
@@ -202,79 +208,69 @@ export default function CreatePage() {
                           onClick={() => setSize('1024*768')}
                         >
                           <div className="flex gap-2 items-center">
-                            <div className="h-3 w-5 border border-gray-400"></div>
-                            <span>1024*768</span>
+                            <div className="h-4 w-5 border border-gray-400"></div>
+                            <span>{t('create.size.option3')}</span>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <Button
-                    type="submit"
-                    className="w-full"
-                    disabled={isLoading || isPolling}
-                  >
-                    {(isLoading || isPolling) && (
-                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  <Button type="submit" disabled={isLoading || prompt.trim().length === 0} className="w-full">
+                    {isLoading ? (
+                      <>
+                        {isPolling ? t('create.generating') : t('create.submitting')} <Loader2 className="ml-2 h-4 w-4 animate-spin" />
+                      </>
+                    ) : (
+                      t('create.generateButton')
                     )}
-                    {isPolling ? 'Generating Image...' : isLoading ? 'Submitting...' : 'Generate Coloring Page'}
                   </Button>
                 </form>
               </div>
 
-              <div className="border rounded-lg overflow-hidden shadow-sm flex flex-col">
-                <div className="p-4 border-b">
-                  <h2 className="text-xl font-semibold">Image Preview</h2>
-                  <p className="text-sm text-gray-500">
-                    Your generated coloring page will appear here
-                  </p>
-                </div>
+              <div className="border rounded-lg p-6 shadow-sm">
+                <h2 className="text-lg font-medium mb-2">{t('create.preview.title')}</h2>
+                <p className="text-sm text-gray-500 mb-4">{t('create.preview.subtitle')}</p>
                 
-                <div className="flex-grow flex items-center justify-center bg-gray-100 p-4 relative min-h-[400px]">
-                  {(isLoading || isPolling) && (
-                    <div className="absolute inset-0 flex flex-col items-center justify-center bg-white/80 backdrop-blur-sm">
+                <div className="aspect-square bg-gray-100 rounded-lg relative overflow-hidden">
+                  {isLoading ? (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-500">
                       <Loader2 className="h-8 w-8 animate-spin mb-2" />
-                      <p>{isPolling ? 'Generating image, please wait...' : 'Submitting...'}</p>
+                      <p>{t('create.preview.loading')}</p>
                     </div>
-                  )}
-                  
-                  {error && !isLoading && !isPolling && (
-                    <div className="text-center text-red-500 p-4">
-                      <p className="font-semibold">Error</p>
-                      <p className="text-sm mt-2">{error}</p>
+                  ) : error ? (
+                    <div className="absolute inset-0 flex flex-col items-center justify-center text-red-500 p-4 text-center">
+                      <p className="font-medium mb-1">{t('create.preview.error')}</p>
+                      <p className="text-sm">{error}</p>
+                      <Button variant="outline" size="sm" className="mt-4" onClick={() => setError(null)}>
+                        {t('create.preview.tryAgainButton')}
+                      </Button>
                     </div>
-                  )}
-                  
-                  {imageUrl && !isLoading && !isPolling && (
-                    <div className="relative w-full h-full flex items-center justify-center">
-                      <img
+                  ) : imageUrl ? (
+                    <>
+                      <Image 
                         src={imageUrl}
                         alt="Generated coloring page"
-                        width={500}
-                        height={500}
-                        className="max-w-full max-h-[400px] object-contain cursor-pointer"
+                        fill
+                        className="object-contain cursor-pointer"
                         onClick={openPreview}
                       />
-                    </div>
-                  )}
-                  
-                  {!imageUrl && !error && !isLoading && !isPolling && (
-                    <div className="text-center text-gray-500">
-                      <p>Use the form on the left to generate a coloring page</p>
-                    </div>
-                  )}
+                      <Button 
+                        variant="secondary" 
+                        size="icon" 
+                        className="absolute bottom-3 right-3"
+                        onClick={handleDownload}
+                      >
+                        <Download className="h-4 w-4" />
+                      </Button>
+                    </>
+                  ) : null}
                 </div>
                 
-                {imageUrl && !isLoading && !isPolling && (
-                  <div className="p-4 border-t">
-                    <Button
-                      onClick={handleDownload}
-                      className="w-full"
-                      variant="outline"
-                    >
-                      <Download className="mr-2 h-4 w-4" />
-                      Download Image
+                {imageUrl && (
+                  <div className="mt-4 flex justify-center">
+                    <Button onClick={handleDownload} className="w-full">
+                      {t('create.preview.downloadButton')} <Download className="ml-2 h-4 w-4" />
                     </Button>
                   </div>
                 )}
@@ -284,27 +280,26 @@ export default function CreatePage() {
         </div>
       </section>
 
+      {/* 全屏预览 */}
       {isPreviewOpen && imageUrl && (
-        <div 
-          className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4"
-          onClick={closePreview}
-        >
-          <div className="relative">
-            <button 
-              className="absolute -top-12 right-0 bg-white rounded-full p-1 z-10"
-              onClick={closePreview}
-            >
-              <X className="h-6 w-6" />
-            </button>
-            <div className="bg-white rounded-md overflow-hidden">
-              <img
-                src={imageUrl}
-                alt="Generated coloring page (enlarged)"
-                className="max-h-[85vh] max-w-[85vw]"
-                style={{ objectFit: 'contain' }}
-                onClick={(e) => e.stopPropagation()}
-              />
-            </div>
+        <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            className="absolute top-4 right-4 text-white"
+            onClick={closePreview}
+          >
+            <X className="h-6 w-6" />
+          </Button>
+          
+          <div className="relative max-w-4xl max-h-screen w-full h-auto">
+            <Image 
+              src={imageUrl}
+              alt="Generated coloring page preview"
+              width={1024}
+              height={1024}
+              className="w-full h-auto object-contain"
+            />
           </div>
         </div>
       )}
