@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { LayoutContainer } from '@/components/layout/layout-container';
 
 export const metadata: Metadata = {
@@ -7,7 +7,14 @@ export const metadata: Metadata = {
   description: 'Learn how Butterfly Coloring Pages collects, uses, and protects your personal information, and your privacy rights when using our services.',
 };
 
-export default async function PrivacyPage() {
+export default async function PrivacyPage({ 
+  params: { locale } 
+}: { 
+  params: { locale: string } 
+}) {
+  // 启用静态渲染
+  unstable_setRequestLocale(locale);
+  
   const t = await getTranslations('privacy');
   const today = new Date().toISOString().split('T')[0];
   

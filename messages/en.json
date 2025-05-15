@@ -148,8 +148,10 @@
     "howItWorks": {
       "title": "How It Works",
       "description": "Our platform offers two main ways to enjoy coloring pages:",
-      "browse": "Browse Coloring Pages: Explore our curated collection of coloring pages organized by themes, difficulty levels, and age groups.",
-      "create": "Create Custom Pages: Use our AI-powered generator to create unique coloring pages based on your text descriptions. Simply type what you want to see, and our system will create a black and white line drawing ready for coloring."
+      "browse": "Browse Coloring Pages",
+      "browseDescription": "Explore our curated collection of coloring pages organized by themes, difficulty levels, and age groups.",
+      "create": "Create Custom Pages",
+      "createDescription": "Use our AI-powered generator to create unique coloring pages based on your text descriptions. Simply type what you want to see, and our system will create a black and white line drawing ready for coloring."
     },
     "technology": {
       "title": "Technology",

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { LayoutContainer } from '@/components/layout/layout-container';
 
 export const metadata: Metadata = {
@@ -7,7 +7,14 @@ export const metadata: Metadata = {
   description: 'Understand the terms, rules, and limitations of using Butterfly Coloring Pages, as well as your responsibilities when using our website.',
 };
 
-export default async function TermsPage() {
+export default async function TermsPage({ 
+  params: { locale } 
+}: { 
+  params: { locale: string } 
+}) {
+  // 启用静态渲染
+  unstable_setRequestLocale(locale);
+  
   const t = await getTranslations('terms');
   const today = new Date().toISOString().split('T')[0];
   
