@@ -3,14 +3,14 @@
 import { useState, useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
-import { Loader2, Download, X } from 'lucide-react';
+import { Loader2, Download, X, Sparkles, Wand2 } from 'lucide-react';
 import { LayoutContainer } from '@/components/layout/layout-container';
 import Image from 'next/image';
 
 // 注意：这是一个客户端组件，不能使用unstable_setRequestLocale
 // 客户端组件会自动从上下文中获取locale参数
 
-export default function CreatePage() {
+export default function TextToColoringPage() {
   const t = useTranslations();
   const [prompt, setPrompt] = useState('');
   const [size, setSize] = useState('1024*1024');
@@ -56,7 +56,7 @@ export default function CreatePage() {
           setImageUrl(data.images[0].url);
         } 
         // 任务失败
-        else if (data.error && data.error !== '任务仍在处理中') {
+        else if (data.error && data.error !== 'Task is still processing') {
           clearPollingInterval();
           setIsPolling(false);
           setIsLoading(false);
@@ -132,7 +132,7 @@ export default function CreatePage() {
     if (imageUrl) {
       const a = document.createElement('a');
       a.href = imageUrl;
-      a.download = `coloring-page-${Date.now()}.png`;
+      a.download = `text-to-coloring-page-${Date.now()}.png`;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
@@ -151,13 +151,22 @@ export default function CreatePage() {
 
   return (
     <LayoutContainer>
-      <section className="py-12">
+      <section className="py-8 md:py-12">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto">
-            <h1 className="text-3xl font-bold text-center mb-8">{t('create.title')}</h1>
+          <div className="max-w-5xl mx-auto text-center">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3">
+              Text to Coloring Page Generator
+            </h1>
+            <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+              Transform your imagination into beautiful coloring pages. Simply describe what you want, and our AI will convert your text to stunning line art in seconds.
+            </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
               <div className="border rounded-lg p-6 shadow-sm">
+                <h2 className="text-xl font-bold mb-4 flex items-center">
+                  <Wand2 className="mr-2 h-5 w-5 text-primary" />
+                  Text to Coloring Converter
+                </h2>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label htmlFor="prompt" className="block text-sm font-medium mb-1">
@@ -167,20 +176,20 @@ export default function CreatePage() {
                       id="prompt"
                       value={prompt}
                       onChange={(e) => setPrompt(e.target.value)}
-                      placeholder={t('create.prompt.placeholder')}
+                      placeholder="Describe what you want to color (e.g., 'A butterfly with beautiful detailed wings')"
                       className="w-full p-2 border rounded-md"
                       rows={4}
                       required
                     />
                     <p className="text-xs text-gray-500 mt-1">
-                      {t('create.prompt.helper')}
+                      Be descriptive for better results. Add details about style, theme, and elements.
                     </p>
                   </div>
 
                   <div className="space-y-4">
                     <div>
                       <label className="flex items-center gap-1 text-sm font-medium mb-2">
-                        {t('create.size.label')} <span className="text-red-500">*</span>
+                        Page Size <span className="text-red-500">*</span>
                       </label>
                       <div className="grid grid-cols-3 gap-2">
                         <div 
@@ -189,7 +198,7 @@ export default function CreatePage() {
                         >
                           <div className="flex gap-2 items-center">
                             <div className="h-5 w-4 border border-gray-400"></div>
-                            <span>{t('create.size.option1')}</span>
+                            <span>Portrait</span>
                           </div>
                         </div>
                         
@@ -199,7 +208,7 @@ export default function CreatePage() {
                         >
                           <div className="flex gap-2 items-center">
                             <div className="h-4 w-4 border border-gray-400"></div>
-                            <span>{t('create.size.option2')}</span>
+                            <span>Square</span>
                           </div>
                         </div>
                         
@@ -209,7 +218,7 @@ export default function CreatePage() {
                         >
                           <div className="flex gap-2 items-center">
                             <div className="h-4 w-5 border border-gray-400"></div>
-                            <span>{t('create.size.option3')}</span>
+                            <span>Landscape</span>
                           </div>
                         </div>
                       </div>
@@ -219,38 +228,51 @@ export default function CreatePage() {
                   <Button type="submit" disabled={isLoading || prompt.trim().length === 0} className="w-full">
                     {isLoading ? (
                       <>
-                        {isPolling ? t('create.generating') : t('create.submitting')} <Loader2 className="ml-2 h-4 w-4 animate-spin" />
+                        {isPolling ? 'Converting Text to Coloring Page...' : 'Processing...'} <Loader2 className="ml-2 h-4 w-4 animate-spin" />
                       </>
                     ) : (
-                      t('create.generateButton')
+                      <>Convert Text to Coloring Page <Sparkles className="ml-2 h-4 w-4" /></>
                     )}
                   </Button>
                 </form>
+
+                <div className="mt-6 pt-4 border-t border-gray-100">
+                  <h3 className="text-md font-semibold mb-2">How Text to Coloring Works:</h3>
+                  <ol className="list-decimal pl-5 text-sm text-gray-600 space-y-1">
+                    <li>Enter a detailed description of what you want to color</li>
+                    <li>Select your preferred page size</li>
+                    <li>Our AI transforms your text into a beautiful line drawing</li>
+                    <li>Download your custom coloring page instantly</li>
+                  </ol>
+                </div>
               </div>
 
               <div className="border rounded-lg p-6 shadow-sm">
-                <h2 className="text-lg font-medium mb-2">{t('create.preview.title')}</h2>
-                <p className="text-sm text-gray-500 mb-4">{t('create.preview.subtitle')}</p>
+                <h2 className="text-xl font-bold mb-4 flex items-center">
+                  <Sparkles className="mr-2 h-5 w-5 text-primary" />
+                  Your Text to Coloring Creation
+                </h2>
+                <p className="text-sm text-gray-500 mb-4">Your custom coloring page will appear here after generation.</p>
                 
                 <div className="aspect-square bg-gray-100 rounded-lg relative overflow-hidden">
                   {isLoading ? (
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-500">
                       <Loader2 className="h-8 w-8 animate-spin mb-2" />
-                      <p>{t('create.preview.loading')}</p>
+                      <p>Converting your text to a coloring page...</p>
                     </div>
                   ) : error ? (
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-red-500 p-4 text-center">
-                      <p className="font-medium mb-1">{t('create.preview.error')}</p>
+                      <p className="font-medium mb-1">Generation Error</p>
                       <p className="text-sm">{error}</p>
                       <Button variant="outline" size="sm" className="mt-4" onClick={() => setError(null)}>
-                        {t('create.preview.tryAgainButton')}
+                        Try Again
                       </Button>
                     </div>
                   ) : imageUrl ? (
                     <>
                       <Image 
                         src={imageUrl}
-                        alt="Generated coloring page"
+                        alt="Generated text to coloring page"
                         fill
                         className="object-contain cursor-pointer"
                         onClick={openPreview}
@@ -270,10 +292,28 @@ export default function CreatePage() {
                 {imageUrl && (
                   <div className="mt-4 flex justify-center">
                     <Button onClick={handleDownload} className="w-full">
-                      {t('create.preview.downloadButton')} <Download className="ml-2 h-4 w-4" />
+                      Download Your Coloring Page <Download className="ml-2 h-4 w-4" />
                     </Button>
                   </div>
                 )}
+              </div>
+            </div>
+
+            <div className="mt-12 text-left">
+              <h2 className="text-2xl font-bold mb-4">Why Use Our Text to Coloring Tool?</h2>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="bg-gray-50 p-5 rounded-lg">
+                  <h3 className="font-semibold text-lg mb-2">Free & Unlimited</h3>
+                  <p>Create as many custom coloring pages as you want - absolutely free! No hidden costs or premium features.</p>
+                </div>
+                <div className="bg-gray-50 p-5 rounded-lg">
+                  <h3 className="font-semibold text-lg mb-2">Instant Generation</h3>
+                  <p>Our AI converts your text descriptions to beautiful coloring pages in seconds - no waiting, no delays.</p>
+                </div>
+                <div className="bg-gray-50 p-5 rounded-lg">
+                  <h3 className="font-semibold text-lg mb-2">Endless Possibilities</h3>
+                  <p>From butterflies to dragons, landscapes to portraits - if you can describe it, our text to coloring converter can create it.</p>
+                </div>
               </div>
             </div>
           </div>
@@ -295,7 +335,7 @@ export default function CreatePage() {
           <div className="relative max-w-4xl max-h-screen w-full h-auto">
             <Image 
               src={imageUrl}
-              alt="Generated coloring page preview"
+              alt="Text to coloring page preview"
               width={1024}
               height={1024}
               className="w-full h-auto object-contain"
