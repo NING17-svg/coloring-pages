@@ -44,7 +44,7 @@ export default async function Home({ params: { locale } }: { params: { locale: s
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg" className="rounded-full">
-                  <Link href={`/${locale}/create`}>
+                  <Link href={`/${locale}/text-to-coloring`}>
                     {t('home.hero.createButton')} <Paintbrush className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
@@ -212,7 +212,7 @@ export default async function Home({ params: { locale } }: { params: { locale: s
                 </li>
               </ul>
               <Button asChild size="lg">
-                <Link href={`/${locale}/create`}>
+                <Link href={`/${locale}/text-to-coloring`}>
                   {t('home.create.button')} <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -329,7 +329,7 @@ export default async function Home({ params: { locale } }: { params: { locale: s
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href={`/${locale}/create`}>
+              <Link href={`/${locale}/text-to-coloring`}>
                 {t('home.cta.createButton')} <Paintbrush className="ml-2 h-4 w-4" />
               </Link>
             </Button>

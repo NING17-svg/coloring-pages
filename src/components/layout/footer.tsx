@@ -88,7 +88,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/create`} className="hover:text-primary transition-colors">
+                <Link href={`/${locale}/text-to-coloring`} className="hover:text-primary transition-colors">
                   {getText('navigation.create')}
                 </Link>
               </li>

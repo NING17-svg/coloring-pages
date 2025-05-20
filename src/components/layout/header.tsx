@@ -66,7 +66,7 @@ export function Header() {
           <Link href={`/${locale}/coloring-pages`} className="text-sm font-medium hover:text-primary transition-colors">
             {locale === 'de' ? 'Malvorlagen' : 'Coloring Pages'}
           </Link>
-          <Link href={`/${locale}/create`} className="text-sm font-medium hover:text-primary transition-colors">
+          <Link href={`/${locale}/text-to-coloring`} className="text-sm font-medium hover:text-primary transition-colors">
             {locale === 'de' ? 'Erstellen' : 'Create'}
           </Link>
           <Link href={`/${locale}/about`} className="text-sm font-medium hover:text-primary transition-colors">

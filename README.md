@@ -153,7 +153,7 @@ OPENAI_API_KEY=your_openai_api_key
 
 ```
 /                             # 首页
-/create                       # 创建新着色页
+/text-to-coloring             # 创建新着色页
 /coloring-pages                   # 所有分类列表
 /category/:slug               # 特定分类页面
 /image/:id                    # 单张图片详情页

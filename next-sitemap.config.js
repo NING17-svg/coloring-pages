@@ -61,7 +61,7 @@ module.exports = {
     }
     
     // 创建页面
-    if (path === '/create') {
+    if (path === '/text-to-coloring') {
       return {
         loc: path,
         changefreq: 'monthly',

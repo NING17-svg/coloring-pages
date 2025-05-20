@@ -21,7 +21,7 @@ export const languages = [
 export const pathnames = {
   '/': '/',
   '/about': '/about',
-  '/create': '/create',
+  '/text-to-coloring': '/text-to-coloring',
   '/coloring-pages': '/coloring-pages',
   '/coloring-pages/:category': '/coloring-pages/:category',
   '/coloring-pages/:category/:imageId': '/coloring-pages/:category/:imageId',
