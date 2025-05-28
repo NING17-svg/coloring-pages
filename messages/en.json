@@ -159,68 +159,110 @@
     },
     "contact": {
       "title": "Contact Us",
-      "description": "Have questions, suggestions, or feedback? We'd love to hear from you! Please visit our contact page to get in touch with our team."
+      "description": "Have a question or feedback? We'd love to hear from you. Use the information below to get in touch with us.",
+      "email": {
+        "title": "Email",
+        "address": "support@butterfly-coloring-pages.com"
+      },
+      "location": {
+        "title": "Location",
+        "address": "Remote Team - Worldwide"
+      },
+      "hours": {
+        "title": "Support Hours",
+        "time": "24/7 Online Support"
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "How can I download coloring pages?",
+        "a1": "Simply click on any coloring page you like and use the download button to save it to your device.",
+        "q2": "Can I use the coloring pages for commercial purposes?",
+        "a2": "Our coloring pages are for personal use only. Please contact us for commercial licensing inquiries.",
+        "q3": "How does the AI coloring page generation work?",
+        "a3": "Our AI system creates unique coloring pages based on your text descriptions. Try it out in our Text-to-Coloring section!",
+        "q4": "Are your coloring pages free to use?",
+        "a4": "Yes, all our basic coloring pages are completely free for personal use."
+      }
     }
   },
   "terms": {
     "title": "Terms of Service",
-    "lastUpdated": "Last Updated:",
-    "intro": "Welcome to Butterfly Coloring Pages. By accessing or using our website, you agree to be bound by these Terms of Service (\"Terms\"). Please read these Terms carefully. If you do not agree to these Terms, please do not use our website.",
-    "websageUsage": {
-      "title": "Website Usage",
-      "description": "Butterfly Coloring Pages provides coloring page download and creation services. You may:",
-      "item1": "Browse and download coloring page resources we provide",
-      "item2": "Use our AI tools to create custom coloring pages",
-      "item3": "Print and personally use these coloring pages"
-    },
-    "userAccounts": {
-      "title": "User Accounts",
-      "description": "Some features may require creating a user account. If you create an account, you are responsible for:",
-      "item1": "Maintaining the security and confidentiality of your account",
-      "item2": "All activities that occur under your account",
-      "item3": "Keeping your account information up to date",
-      "note": "We reserve the right to refuse service, terminate accounts, or remove or edit content at our sole discretion."
-    },
-    "intellectualProperty": {
-      "title": "Intellectual Property",
-      "ourContent": "Our Content: All content on the website, including but not limited to designs, text, graphics, images, coloring page templates, etc. (except for user-generated content), is the property of Butterfly Coloring Pages and its licensors, and is protected by copyright and other intellectual property laws.",
-      "userContent": "User-Generated Content: For custom coloring pages created using our AI tools, you retain ownership of the content you create. However, you grant us a worldwide, non-exclusive, royalty-free license to use, reproduce, modify, publish, and display the content you create for the purpose of operating and improving our services.",
-      "restrictions": {
-        "title": "Usage Restrictions",
-        "description": "You may not:",
-        "item1": "Copy, modify, or create derivative works of our website content for commercial purposes",
-        "item2": "Remove any copyright or other proprietary notices from our website",
-        "item3": "Resell, sublicense, or otherwise commercialize our content"
+    "lastUpdated": "Last Updated: March 14, 2024",
+    "sections": {
+      "acceptance": {
+        "title": "Acceptance of Terms",
+        "content": "By accessing and using Butterfly Coloring Pages, you agree to be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use our website."
+      },
+      "services": {
+        "title": "Our Services",
+        "content": "We provide a platform for accessing and downloading coloring pages, as well as creating custom coloring pages using AI technology. All our basic services are free to use, though some premium features may require payment."
+      },
+      "userContent": {
+        "title": "User Content",
+        "content": "When using our AI coloring page generation service, you retain ownership of any content you create. However, you grant us a non-exclusive license to display, store, and use the generated content for service improvement."
+      },
+      "intellectualProperty": {
+        "title": "Intellectual Property",
+        "content": "All coloring pages, designs, and content on our website are protected by copyright and other intellectual property laws. You may download and print our coloring pages for personal, non-commercial use only."
+      },
+      "limitations": {
+        "title": "Limitations of Use",
+        "content": "You agree not to use our services for any unlawful purpose or in any way that could damage or impair our website. This includes not attempting to gain unauthorized access to our systems or interfering with other users."
+      },
+      "disclaimer": {
+        "title": "Disclaimer",
+        "content": "Our services are provided 'as is' without any warranties. We do not guarantee that our website will be error-free or uninterrupted, or that any defects will be corrected."
+      },
+      "changes": {
+        "title": "Changes to Terms",
+        "content": "We reserve the right to modify these terms at any time. Continued use of our website after any changes constitutes acceptance of the new terms."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "content": "If you have any questions about these Terms of Service, please contact us at <a href='mailto:support@butterfly-coloring-pages.com' class='text-primary hover:underline'>support@butterfly-coloring-pages.com</a>"
       }
-    },
-    "contact": {
-      "title": "Contact Us",
-      "description": "If you have any questions about these Terms of Service, please contact us through our contact page."
     }
   },
   "privacy": {
     "title": "Privacy Policy",
-    "lastUpdated": "Last Updated:",
-    "intro": "Welcome to Butterfly Coloring Pages. We are committed to protecting your privacy and personal information. This Privacy Policy describes how we collect, use, disclose, and protect the information you provide when using our website.",
-    "infoCollect": {
-      "title": "Information We Collect",
-      "personal": "Personal Information: When you use our website, we may collect the following personal information:",
-      "item1": "Information you provide to us, such as your name and email address (e.g., when contacting us or registering)",
-      "item2": "Technical information about your device, such as IP address, browser type, and operating system",
-      "item3": "Information about your interactions with our website, such as browsing history and access times"
-    },
-    "infoUse": {
-      "title": "How We Use Your Information",
-      "description": "We use the information we collect to:",
-      "item1": "Provide, maintain, and improve our services",
-      "item2": "Respond to your inquiries and requests",
-      "item3": "Send you notifications and updates related to our services",
-      "item4": "Monitor and analyze website usage and trends",
-      "item5": "Prevent fraudulent activities and enhance website security"
-    },
-    "contact": {
-      "title": "Contact Us",
-      "description": "If you have any questions or concerns about this Privacy Policy, please contact us through our contact page."
+    "lastUpdated": "Last Updated: March 14, 2024",
+    "sections": {
+      "introduction": {
+        "title": "Introduction",
+        "content": "At Butterfly Coloring Pages, we take your privacy seriously. This Privacy Policy explains how we collect, use, and protect your personal information when you use our website."
+      },
+      "collection": {
+        "title": "Information We Collect",
+        "content": "We collect information that you provide directly to us, such as when you create an account or contact us. We also automatically collect certain information about your device and how you interact with our website."
+      },
+      "usage": {
+        "title": "How We Use Your Information",
+        "content": "We use the information we collect to provide and improve our services, communicate with you, analyze how our website is used, and protect our legal rights."
+      },
+      "cookies": {
+        "title": "Cookies and Tracking",
+        "content": "We use cookies and similar tracking technologies to collect and store information about how you use our website. You can control cookies through your browser settings, but this may affect certain website features."
+      },
+      "thirdParty": {
+        "title": "Third-Party Services",
+        "content": "Our website uses third-party services like Google Analytics and Google AdSense. These services may collect information about you according to their own privacy policies."
+      },
+      "security": {
+        "title": "Data Security",
+        "content": "We implement appropriate security measures to protect your personal information from unauthorized access, disclosure, or misuse."
+      },
+      "rights": {
+        "title": "Your Privacy Rights",
+        "content": "You have the right to access, correct, or delete your personal information. You can also object to or restrict certain processing of your data."
+      },
+      "changes": {
+        "title": "Changes to This Policy",
+        "content": "We may update this Privacy Policy from time to time. We will notify you of any significant changes by posting the new policy on this page."
+      },
+      "contact": {
+        "title": "Contact Us",
+        "content": "If you have any questions about this Privacy Policy, please contact us at <a href='mailto:support@butterfly-coloring-pages.com' class='text-primary hover:underline'>support@butterfly-coloring-pages.com</a>"
+      }
     }
   },
   "footer": {

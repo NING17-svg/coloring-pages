@@ -164,63 +164,82 @@
   },
   "terms": {
     "title": "Nutzungsbedingungen",
-    "lastUpdated": "Zuletzt aktualisiert:",
-    "intro": "Willkommen bei Schmetterling-Malvorlagen. Durch den Zugriff auf oder die Nutzung unserer Website erklären Sie sich mit diesen Nutzungsbedingungen (\"Bedingungen\") einverstanden. Bitte lesen Sie diese Bedingungen sorgfältig durch. Wenn Sie mit diesen Bedingungen nicht einverstanden sind, nutzen Sie bitte unsere Website nicht.",
-    "websageUsage": {
-      "title": "Website-Nutzung",
-      "description": "Schmetterling-Malvorlagen bietet Malvorlagen zum Download und zur Erstellung an. Sie dürfen:",
-      "item1": "Die von uns bereitgestellten Malvorlagen-Ressourcen durchsuchen und herunterladen",
-      "item2": "Unsere KI-Tools zur Erstellung eigener Malvorlagen nutzen",
-      "item3": "Diese Malvorlagen ausdrucken und persönlich verwenden"
-    },
-    "userAccounts": {
-      "title": "Benutzerkonten",
-      "description": "Für einige Funktionen kann die Erstellung eines Benutzerkontos erforderlich sein. Wenn Sie ein Konto erstellen, sind Sie verantwortlich für:",
-      "item1": "Die Aufrechterhaltung der Sicherheit und Vertraulichkeit Ihres Kontos",
-      "item2": "Alle Aktivitäten, die unter Ihrem Konto stattfinden",
-      "item3": "Die Aktualität Ihrer Kontoinformationen",
-      "note": "Wir behalten uns das Recht vor, den Service zu verweigern, Konten zu kündigen oder Inhalte nach eigenem Ermessen zu entfernen oder zu bearbeiten."
-    },
-    "intellectualProperty": {
-      "title": "Geistiges Eigentum",
-      "ourContent": "Unsere Inhalte: Alle Inhalte auf der Website, einschließlich, aber nicht beschränkt auf Designs, Texte, Grafiken, Bilder, Malvorlagen-Vorlagen usw. (mit Ausnahme von nutzergenerierten Inhalten), sind Eigentum von Schmetterling-Malvorlagen und seinen Lizenzgebern und durch Urheberrechte und andere Gesetze zum Schutz des geistigen Eigentums geschützt.",
-      "userContent": "Nutzergenerierte Inhalte: Für mit unseren KI-Tools erstellte benutzerdefinierte Malvorlagen behalten Sie das Eigentum an den von Ihnen erstellten Inhalten. Sie gewähren uns jedoch eine weltweite, nicht-exklusive, gebührenfreie Lizenz zur Nutzung, Reproduktion, Modifikation, Veröffentlichung und Anzeige der von Ihnen erstellten Inhalte zum Zwecke des Betriebs und der Verbesserung unserer Dienste.",
-      "restrictions": {
+    "lastUpdated": "Zuletzt aktualisiert: 14. März 2024",
+    "sections": {
+      "acceptance": {
+        "title": "Annahme der Bedingungen",
+        "content": "Durch den Zugriff auf und die Nutzung von Butterfly Coloring Pages erklären Sie sich mit diesen Nutzungsbedingungen einverstanden. Wenn Sie mit einem Teil dieser Bedingungen nicht einverstanden sind, nutzen Sie bitte unsere Website nicht."
+      },
+      "services": {
+        "title": "Unsere Dienste",
+        "content": "Wir bieten eine Plattform für den Zugriff auf und das Herunterladen von Malvorlagen sowie die Erstellung benutzerdefinierter Malvorlagen mithilfe von KI-Technologie. Alle unsere Basisdienste sind kostenlos, einige Premium-Funktionen können jedoch kostenpflichtig sein."
+      },
+      "userContent": {
+        "title": "Benutzerinhalte",
+        "content": "Bei der Nutzung unseres KI-Malvorlagen-Generierungsdienstes behalten Sie das Eigentum an allen von Ihnen erstellten Inhalten. Sie gewähren uns jedoch eine nicht-exklusive Lizenz zur Anzeige, Speicherung und Nutzung der generierten Inhalte zur Verbesserung des Dienstes."
+      },
+      "intellectualProperty": {
+        "title": "Geistiges Eigentum",
+        "content": "Alle Malvorlagen, Designs und Inhalte auf unserer Website sind durch Urheberrecht und andere Gesetze zum Schutz des geistigen Eigentums geschützt. Sie dürfen unsere Malvorlagen nur für den persönlichen, nicht-kommerziellen Gebrauch herunterladen und ausdrucken."
+      },
+      "limitations": {
         "title": "Nutzungsbeschränkungen",
-        "description": "Sie dürfen nicht:",
-        "item1": "Unsere Website-Inhalte für kommerzielle Zwecke kopieren, modifizieren oder abgeleitete Werke erstellen",
-        "item2": "Urheberrechts- oder andere Eigentumshinweise von unserer Website entfernen",
-        "item3": "Unsere Inhalte weiterverkaufen, unterlizenzieren oder anderweitig kommerzialisieren"
+        "content": "Sie verpflichten sich, unsere Dienste nicht für rechtswidrige Zwecke oder in einer Weise zu nutzen, die unsere Website beschädigen oder beeinträchtigen könnte. Dies schließt ein, dass Sie nicht versuchen, unbefugten Zugriff auf unsere Systeme zu erlangen oder andere Benutzer zu stören."
+      },
+      "disclaimer": {
+        "title": "Haftungsausschluss",
+        "content": "Unsere Dienste werden 'wie besehen' ohne jegliche Garantien bereitgestellt. Wir garantieren nicht, dass unsere Website fehlerfrei oder ununterbrochen funktioniert oder dass Fehler korrigiert werden."
+      },
+      "changes": {
+        "title": "Änderungen der Bedingungen",
+        "content": "Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern. Die weitere Nutzung unserer Website nach Änderungen stellt die Annahme der neuen Bedingungen dar."
+      },
+      "contact": {
+        "title": "Kontaktieren Sie uns",
+        "content": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, kontaktieren Sie uns bitte unter <a href='mailto:support@butterfly-coloring-pages.com' class='text-primary hover:underline'>support@butterfly-coloring-pages.com</a>"
       }
-    },
-    "contact": {
-      "title": "Kontaktieren Sie uns",
-      "description": "Wenn Sie Fragen zu diesen Nutzungsbedingungen haben, kontaktieren Sie uns bitte über unsere Kontaktseite."
     }
   },
   "privacy": {
-    "title": "Datenschutzrichtlinie",
-    "lastUpdated": "Zuletzt aktualisiert:",
-    "intro": "Willkommen bei Schmetterling-Malvorlagen. Wir verpflichten uns, Ihre Privatsphäre und persönlichen Daten zu schützen. Diese Datenschutzrichtlinie beschreibt, wie wir die Informationen, die Sie bei der Nutzung unserer Website bereitstellen, sammeln, verwenden, offenlegen und schützen.",
-    "infoCollect": {
-      "title": "Informationen, die wir sammeln",
-      "personal": "Persönliche Informationen: Wenn Sie unsere Website nutzen, können wir folgende persönliche Informationen sammeln:",
-      "item1": "Informationen, die Sie uns zur Verfügung stellen, wie Ihren Namen und Ihre E-Mail-Adresse (z.B. bei Kontaktaufnahme oder Registrierung)",
-      "item2": "Technische Informationen über Ihr Gerät, wie IP-Adresse, Browser-Typ und Betriebssystem",
-      "item3": "Informationen über Ihre Interaktionen mit unserer Website, wie Browserverlauf und Zugriffszeiten"
-    },
-    "infoUse": {
-      "title": "Wie wir Ihre Informationen verwenden",
-      "description": "Wir verwenden die gesammelten Informationen, um:",
-      "item1": "Unsere Dienste bereitzustellen, zu pflegen und zu verbessern",
-      "item2": "Auf Ihre Anfragen und Wünsche zu reagieren",
-      "item3": "Ihnen Benachrichtigungen und Updates zu unseren Diensten zu senden",
-      "item4": "Die Website-Nutzung und Trends zu überwachen und zu analysieren",
-      "item5": "Betrügerische Aktivitäten zu verhindern und die Website-Sicherheit zu erhöhen"
-    },
-    "contact": {
-      "title": "Kontaktieren Sie uns",
-      "description": "Wenn Sie Fragen oder Bedenken zu dieser Datenschutzrichtlinie haben, kontaktieren Sie uns bitte über unsere Kontaktseite."
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Zuletzt aktualisiert: 14. März 2024",
+    "sections": {
+      "introduction": {
+        "title": "Einführung",
+        "content": "Bei Butterfly Coloring Pages nehmen wir Ihre Privatsphäre ernst. Diese Datenschutzerklärung erläutert, wie wir Ihre personenbezogenen Daten bei der Nutzung unserer Website erfassen, verwenden und schützen."
+      },
+      "collection": {
+        "title": "Informationen, die wir sammeln",
+        "content": "Wir sammeln Informationen, die Sie uns direkt zur Verfügung stellen, zum Beispiel wenn Sie ein Konto erstellen oder uns kontaktieren. Wir erfassen auch automatisch bestimmte Informationen über Ihr Gerät und wie Sie mit unserer Website interagieren."
+      },
+      "usage": {
+        "title": "Wie wir Ihre Informationen verwenden",
+        "content": "Wir verwenden die gesammelten Informationen, um unsere Dienste bereitzustellen und zu verbessern, mit Ihnen zu kommunizieren, die Nutzung unserer Website zu analysieren und unsere rechtlichen Rechte zu schützen."
+      },
+      "cookies": {
+        "title": "Cookies und Tracking",
+        "content": "Wir verwenden Cookies und ähnliche Tracking-Technologien, um Informationen darüber zu sammeln und zu speichern, wie Sie unsere Website nutzen. Sie können Cookies über Ihre Browsereinstellungen kontrollieren, dies kann jedoch bestimmte Website-Funktionen beeinträchtigen."
+      },
+      "thirdParty": {
+        "title": "Dienste von Drittanbietern",
+        "content": "Unsere Website verwendet Dienste von Drittanbietern wie Google Analytics und Google AdSense. Diese Dienste können gemäß ihren eigenen Datenschutzrichtlinien Informationen über Sie sammeln."
+      },
+      "security": {
+        "title": "Datensicherheit",
+        "content": "Wir implementieren angemessene Sicherheitsmaßnahmen, um Ihre personenbezogenen Daten vor unbefugtem Zugriff, Offenlegung oder Missbrauch zu schützen."
+      },
+      "rights": {
+        "title": "Ihre Datenschutzrechte",
+        "content": "Sie haben das Recht, auf Ihre personenbezogenen Daten zuzugreifen, sie zu korrigieren oder zu löschen. Sie können auch der Verarbeitung Ihrer Daten widersprechen oder sie einschränken."
+      },
+      "changes": {
+        "title": "Änderungen dieser Richtlinie",
+        "content": "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Wir werden Sie über wesentliche Änderungen informieren, indem wir die neue Richtlinie auf dieser Seite veröffentlichen."
+      },
+      "contact": {
+        "title": "Kontaktieren Sie uns",
+        "content": "Wenn Sie Fragen zu dieser Datenschutzerklärung haben, kontaktieren Sie uns bitte unter <a href='mailto:support@butterfly-coloring-pages.com' class='text-primary hover:underline'>support@butterfly-coloring-pages.com</a>"
+      }
     }
   },
   "footer": {
@@ -231,5 +250,32 @@
     "copyright": "© 2024 Butterfly Coloring Pages. Alle Rechte vorbehalten.",
     "terms": "Nutzungsbedingungen",
     "privacy": "Datenschutz"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "description": "Haben Sie eine Frage oder Feedback? Wir würden uns freuen, von Ihnen zu hören. Nutzen Sie die folgenden Informationen, um uns zu kontaktieren.",
+    "email": {
+      "title": "E-Mail",
+      "address": "support@butterfly-coloring-pages.com"
+    },
+    "location": {
+      "title": "Standort",
+      "address": "Remote Team - Weltweit"
+    },
+    "hours": {
+      "title": "Support-Zeiten",
+      "time": "24/7 Online-Support"
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "q1": "Wie kann ich Malvorlagen herunterladen?",
+      "a1": "Klicken Sie einfach auf eine beliebige Malvorlage und nutzen Sie die Download-Schaltfläche, um sie auf Ihrem Gerät zu speichern.",
+      "q2": "Kann ich die Malvorlagen für kommerzielle Zwecke nutzen?",
+      "a2": "Unsere Malvorlagen sind nur für den persönlichen Gebrauch bestimmt. Bitte kontaktieren Sie uns für kommerzielle Lizenzanfragen.",
+      "q3": "Wie funktioniert die KI-Malvorlagengenerierung?",
+      "a3": "Unser KI-System erstellt einzigartige Malvorlagen basierend auf Ihren Textbeschreibungen. Probieren Sie es in unserem Text-zu-Malvorlage-Bereich aus!",
+      "q4": "Sind Ihre Malvorlagen kostenlos?",
+      "a4": "Ja, alle unsere grundlegenden Malvorlagen sind für den persönlichen Gebrauch völlig kostenlos."
+    }
   }
 }
