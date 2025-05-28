@@ -18,7 +18,9 @@ export const metadata: Metadata = {
   }
 };
 
-export default async function Home({ params: { locale } }: { params: { locale: string } }) {
+export default async function Home(props: { params: { locale: string } }) {
+  const locale = props.params.locale;
+  
   // 启用静态渲染
   unstable_setRequestLocale(locale);
   

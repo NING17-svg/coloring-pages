@@ -10,7 +10,8 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata(props: { params: { locale: string } }): Promise<Metadata> {
+  const locale = props.params.locale;
   const messages = await getMessages({ locale });
   const siteMessages = (messages as any).site || {};
   
@@ -44,13 +45,12 @@ export const viewport: Viewport = {
   viewportFit: "cover",
 };
 
-export default async function LocaleLayout({
-  children,
-  params: { locale }
-}: Readonly<{
+export default async function LocaleLayout(props: Readonly<{
   children: React.ReactNode;
   params: { locale: string }
 }>) {
+  const locale = props.params.locale;
+  
   // 验证语言环境
   if (!locales.includes(locale as any)) {
     notFound();
@@ -89,7 +89,7 @@ export default async function LocaleLayout({
       
       <body className="font-sans antialiased">
         <NextIntlClientProvider messages={messages} locale={locale}>
-          {children}
+          {props.children}
         </NextIntlClientProvider>
       </body>
     </html>

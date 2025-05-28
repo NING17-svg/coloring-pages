@@ -13,16 +13,10 @@ export default createMiddleware({
 // 匹配规则
 export const config = {
   matcher: [
-    // 根路径
-    '/',
+    // 匹配所有路径
+    '/((?!api|_next|_vercel|.*\\..*).*)',
     
-    // 支持多语言（英文和德文）
-    '/(en|de)/:path*',
-    
-    // 明确匹配详情页路由 - 这会被中间件处理并重定向到带有语言前缀的URL
-    '/coloring-pages/:path*',
-    
-    // 资源和API路径除外
-    '/((?!api|_next|_vercel|.*\\..*).*)'
+    // 支持德语路径
+    '/de/:path*'
   ]
 }; 
