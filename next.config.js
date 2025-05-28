@@ -28,7 +28,59 @@ const nextConfig = {
     // 确保静态资源被正确处理
     assetPrefix: '',
     // 提高构建输出的详细程度
-    output: 'standalone'
+    output: 'standalone',
+    // 添加重写规则，将无前缀路径映射到英语路径
+    async rewrites() {
+      return {
+        beforeFiles: [
+          // 首页映射
+          {
+            source: '/',
+            destination: '/en'
+          },
+          // 关于页面映射
+          {
+            source: '/about',
+            destination: '/en/about'
+          },
+          // 隐私政策映射
+          {
+            source: '/privacy',
+            destination: '/en/privacy'
+          },
+          // 服务条款映射
+          {
+            source: '/terms',
+            destination: '/en/terms'
+          },
+          // 联系页面映射
+          {
+            source: '/contact',
+            destination: '/en/contact'
+          },
+          // 文本转色页映射
+          {
+            source: '/text-to-coloring',
+            destination: '/en/text-to-coloring'
+          },
+          // 着色页面映射
+          {
+            source: '/coloring-pages',
+            destination: '/en/coloring-pages'
+          },
+          // 着色页面分类映射
+          {
+            source: '/coloring-pages/:category',
+            destination: '/en/coloring-pages/:category'
+          },
+          // 着色页面详情映射
+          {
+            source: '/coloring-pages/:category/:imageId',
+            destination: '/en/coloring-pages/:category/:imageId'
+          }
+        ]
+      };
+    }
 };
   
 module.exports = withNextIntl(nextConfig);

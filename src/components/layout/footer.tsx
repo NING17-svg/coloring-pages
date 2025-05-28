@@ -1,12 +1,26 @@
 'use client';
 
-import Link from 'next/link';
+import Link from 'next/link';  // 改回使用Next.js原生Link
 import Image from 'next/image';
-import { useParams } from 'next/navigation';
+import { useParams, usePathname } from 'next/navigation';
 
 export function Footer() {
-  const { locale } = useParams() as { locale: string };
+  const { locale } = useParams() as { locale?: string };  // 可选参数
+  const pathname = usePathname();
   const currentYear = new Date().getFullYear();
+  
+  // 判断当前使用的语言
+  const currentLocale = locale || 'en';
+  
+  // 构建链接路径
+  const getLocalizedPath = (path: string) => {
+    // 如果是默认语言(英文)且不在locale子目录下，不需要前缀
+    if (currentLocale === 'en' && !pathname?.startsWith('/en')) {
+      return path;
+    }
+    // 其他语言或在locale子目录下，需要带上语言前缀
+    return currentLocale === 'en' ? path : `/${currentLocale}${path}`;
+  };
   
   // 根据语言提供对应文本
   const getText = (key: string): string => {
@@ -57,7 +71,7 @@ export function Footer() {
       }
     };
 
-    return translations[key]?.[locale] || translations[key]?.['en'] || key;
+    return translations[key]?.[currentLocale] || translations[key]?.['en'] || key;
   };
   
   return (
@@ -78,17 +92,17 @@ export function Footer() {
             <h4 className="font-medium mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href={`/${locale}`} className="hover:text-primary transition-colors">
+                <Link href={getLocalizedPath('/')} className="hover:text-primary transition-colors">
                   {getText('navigation.home')}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/coloring-pages`} className="hover:text-primary transition-colors">
+                <Link href={getLocalizedPath('/coloring-pages')} className="hover:text-primary transition-colors">
                   {getText('navigation.categories')}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/text-to-coloring`} className="hover:text-primary transition-colors">
+                <Link href={getLocalizedPath('/text-to-coloring')} className="hover:text-primary transition-colors">
                   {getText('navigation.create')}
                 </Link>
               </li>
@@ -100,17 +114,17 @@ export function Footer() {
             <h4 className="font-medium mb-4">{getText('footer.resources')}</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href={`/${locale}/about`} className="hover:text-primary transition-colors">
+                <Link href={getLocalizedPath('/about')} className="hover:text-primary transition-colors">
                   {getText('navigation.about')}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/terms`} className="hover:text-primary transition-colors">
+                <Link href={getLocalizedPath('/terms')} className="hover:text-primary transition-colors">
                   {getText('footer.terms')}
                 </Link>
               </li>
               <li>
-                <Link href={`/${locale}/privacy`} className="hover:text-primary transition-colors">
+                <Link href={getLocalizedPath('/privacy')} className="hover:text-primary transition-colors">
                   {getText('footer.privacy')}
                 </Link>
               </li>
@@ -124,7 +138,7 @@ export function Footer() {
               {getText('footer.contactText')}
             </p>
             <Link 
-              href={`/${locale}/contact`} 
+              href={getLocalizedPath('/contact')} 
               className="text-sm hover:text-primary transition-colors"
             >
               {getText('footer.contact')}

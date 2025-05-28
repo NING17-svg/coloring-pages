@@ -26,10 +26,11 @@ export const pathnames = {
   '/coloring-pages/:category': '/coloring-pages/:category',
   '/coloring-pages/:category/:imageId': '/coloring-pages/:category/:imageId',
   '/privacy': '/privacy',
-  '/terms': '/terms'
+  '/terms': '/terms',
+  '/contact': '/contact'
 } satisfies Pathnames<typeof locales>;
 
-// 设置为as-needed，允许语言切换但不强制重定向
+// 将localePrefix设置为'as-needed'，这样英语(默认语言)不会有前缀，只有其他语言会有前缀
 export const localePrefix = 'as-needed';
 
 export type AppPathnames = keyof typeof pathnames; 
