@@ -1,10 +1,12 @@
 import { MetadataRoute } from 'next';
 import { getLocales } from '../i18n';
 
-// 常见的标签列表，用于生成标签页面的URL
+// 项目中实际使用的标签列表，用于生成标签页面的URL
 const tags = [
-  'stars', 'butterfly', 'detailed', 'monarch', 'creature',
-  'fantasy', 'mythical', 'dragon', 'rainbow', 'unicorn'
+  'butterfly', 'detailed', 'nature', 'insects', 'simple', 'kids', 'easy',
+  'monarch', 'flowers', 'garden', 'cartoon', 'flower', 'unicorn', 'fantasy',
+  'magical', 'rainbow', 'stars', 'dragon', 'mythical', 'creature', 'fire',
+  'medieval'
 ];
 
 // 站点的基本URL
