@@ -4,16 +4,28 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getCategoryData } from '@/lib/coloring-data';
 import { unstable_setRequestLocale } from "next-intl/server";
+import { defaultLocale } from '@/config';
 
-export const metadata: Metadata = {
-  title: 'Unicorn Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com',
-  description: 'Download magical unicorn coloring pages for free. Enchanted designs with rainbows, stars, and fantasy elements for children and adults.',
-  keywords: ['unicorn coloring pages', 'printable unicorn designs', 'fantasy coloring sheets', 'magical creature coloring', 'rainbow unicorn coloring'],
-  robots: 'index, follow',
-  alternates: {
-    canonical: 'https://butterfly-coloring-pages.com/coloring-pages/unicorn-coloring-pages'
-  }
-};
+// 使用generateMetadata函数动态生成元数据
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: { locale: string } 
+}): Promise<Metadata> {
+  // 根据localePrefix配置处理canonical URL
+  const localePath = params.locale === defaultLocale ? '' : `/${params.locale}`;
+  const canonicalUrl = `https://butterfly-coloring-pages.com${localePath}/coloring-pages/unicorn-coloring-pages`;
+
+  return {
+    title: 'Unicorn Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com',
+    description: 'Download magical unicorn coloring pages for free. Enchanting designs with rainbows, stars and fantasy scenes for kids of all ages.',
+    keywords: ['unicorn coloring pages', 'printable unicorn designs', 'magical coloring pages', 'fantasy coloring sheets', 'rainbow unicorn coloring'],
+    robots: 'index, follow',
+    alternates: {
+      canonical: canonicalUrl
+    }
+  };
+}
 
 export default function UnicornColoringPages({
   params,

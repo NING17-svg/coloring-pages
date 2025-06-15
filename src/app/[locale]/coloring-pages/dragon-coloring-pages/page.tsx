@@ -4,16 +4,28 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getCategoryData } from '@/lib/coloring-data';
 import { unstable_setRequestLocale } from "next-intl/server";
+import { defaultLocale } from '@/config';
 
-export const metadata: Metadata = {
-  title: 'Dragon Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com',
-  description: 'Download free dragon coloring pages featuring mythical creatures with detailed scales, wings and more. Perfect for kids and fantasy lovers.',
-  keywords: ['dragon coloring pages', 'printable dragon designs', 'fantasy coloring pages', 'dragon drawings to color', 'mythical creature coloring'],
-  robots: 'index, follow',
-  alternates: {
-    canonical: 'https://butterfly-coloring-pages.com/coloring-pages/dragon-coloring-pages'
-  }
-};
+// 使用generateMetadata函数动态生成元数据
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: { locale: string } 
+}): Promise<Metadata> {
+  // 根据localePrefix配置处理canonical URL
+  const localePath = params.locale === defaultLocale ? '' : `/${params.locale}`;
+  const canonicalUrl = `https://butterfly-coloring-pages.com${localePath}/coloring-pages/dragon-coloring-pages`;
+
+  return {
+    title: 'Dragon Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com',
+    description: 'Download free dragon coloring pages featuring mythical creatures with detailed scales, wings and more. Perfect for kids and fantasy lovers.',
+    keywords: ['dragon coloring pages', 'printable dragon designs', 'fantasy coloring pages', 'dragon drawings to color', 'mythical creature coloring'],
+    robots: 'index, follow',
+    alternates: {
+      canonical: canonicalUrl
+    }
+  };
+}
 
 export default function DragonColoringPages({
   params,

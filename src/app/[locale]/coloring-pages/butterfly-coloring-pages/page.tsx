@@ -4,16 +4,28 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getCategoryData } from '@/lib/coloring-data';
 import { unstable_setRequestLocale } from "next-intl/server";
+import { defaultLocale } from '@/config';
 
-export const metadata: Metadata = {
-  title: 'Butterfly Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com',
-  description: 'Download beautiful butterfly coloring pages for free. Detailed wing patterns, simple designs for kids, and more. Print and enjoy!',
-  keywords: ['butterfly coloring pages', 'printable butterfly designs', 'free butterfly coloring', 'kids butterfly coloring', 'butterflies to color'],
-  robots: 'index, follow',
-  alternates: {
-    canonical: 'https://butterfly-coloring-pages.com/coloring-pages/butterfly-coloring-pages'
-  }
-};
+// 使用generateMetadata函数动态生成元数据
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: { locale: string } 
+}): Promise<Metadata> {
+  // 根据localePrefix配置处理canonical URL
+  const localePath = params.locale === defaultLocale ? '' : `/${params.locale}`;
+  const canonicalUrl = `https://butterfly-coloring-pages.com${localePath}/coloring-pages/butterfly-coloring-pages`;
+
+  return {
+    title: 'Butterfly Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com',
+    description: 'Download beautiful butterfly coloring pages for free. Detailed wing patterns, simple designs for kids, and more. Print and enjoy!',
+    keywords: ['butterfly coloring pages', 'printable butterfly designs', 'free butterfly coloring', 'kids butterfly coloring', 'butterflies to color'],
+    robots: 'index, follow',
+    alternates: {
+      canonical: canonicalUrl
+    }
+  };
+}
 
 export default function ButterflyColoringPages({
   params,

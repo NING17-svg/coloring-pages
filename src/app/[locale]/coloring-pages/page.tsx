@@ -3,6 +3,7 @@ import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 import { LayoutContainer } from '@/components/layout/layout-container';
 import Link from 'next/link';
 import Image from 'next/image';
+import { defaultLocale } from '@/config';
 
 // 直接导入JSON数据，与首页保持一致
 import butterflyData from '../../../../data/butterfly-coloring-pages.json';
@@ -15,15 +16,19 @@ export async function generateMetadata({
 }: {
   params: { locale: string }
 }): Promise<Metadata> {
+  // 根据localePrefix配置处理canonical URL
+  const localePath = locale === defaultLocale ? '' : `/${locale}`;
+  const canonicalUrl = `https://butterfly-coloring-pages.com${localePath}/coloring-pages`;
+
   return {
     title: 'Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com',
     description: 'Browse our collection of free printable coloring pages organized by themes. Find perfect designs including butterflies, flowers, dragons and unicorns for kids and adults to print and enjoy.',
     keywords: ['coloring pages', 'printable coloring pages', 'butterfly coloring pages', 'flower coloring pages', 'dragon coloring pages', 'unicorn coloring pages'],
     robots: 'index, follow',
     alternates: {
-      canonical: `https://butterfly-coloring-pages.com/${locale}/coloring-pages`,
+      canonical: canonicalUrl,
       languages: {
-        'en': 'https://butterfly-coloring-pages.com/en/coloring-pages',
+        'en': 'https://butterfly-coloring-pages.com/coloring-pages',
         'de': 'https://butterfly-coloring-pages.com/de/coloring-pages',
       }
     }

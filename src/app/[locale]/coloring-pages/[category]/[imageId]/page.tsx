@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Download, ArrowLeft, Share2 } from 'lucide-react';
 import { getImageData, getCategoryData, getRelatedImages, getAllImagePaths } from '@/lib/coloring-data';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+import { defaultLocale } from '@/config';
 
 // Generate dynamic metadata
 export async function generateMetadata({ 
@@ -23,13 +24,18 @@ export async function generateMetadata({
     };
   }
 
+  // 根据localePrefix配置处理canonical URL
+  // 默认语言(英语)不需要前缀，其他语言需要前缀
+  const localePath = params.locale === defaultLocale ? '' : `/${params.locale}`;
+  const canonicalUrl = `https://butterfly-coloring-pages.com${localePath}/coloring-pages/${params.category}/${params.imageId}`;
+
   return {
     title: `${image.title} | Free Printable Coloring Page | butterfly-coloring-pages.com`,
     description: image.description,
     keywords: image.tags,
     robots: 'index, follow',
     alternates: {
-      canonical: `https://butterfly-coloring-pages.com/${params.locale}/coloring-pages/${params.category}/${params.imageId}`
+      canonical: canonicalUrl
     }
   };
 }

@@ -4,16 +4,28 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getCategoryData } from '@/lib/coloring-data';
 import { unstable_setRequestLocale } from "next-intl/server";
+import { defaultLocale } from '@/config';
 
-export const metadata: Metadata = {
-  title: 'Flower Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com',
-  description: 'Download beautiful flower coloring pages for free. Rose, tulip, daisy and more floral designs available to print for all ages.',
-  keywords: ['flower coloring pages', 'printable flower designs', 'floral coloring sheets', 'rose coloring pages', 'garden coloring pages'],
-  robots: 'index, follow',
-  alternates: {
-    canonical: 'https://butterfly-coloring-pages.com/coloring-pages/flower-coloring-pages'
-  }
-};
+// 使用generateMetadata函数动态生成元数据
+export async function generateMetadata({ 
+  params 
+}: { 
+  params: { locale: string } 
+}): Promise<Metadata> {
+  // 根据localePrefix配置处理canonical URL
+  const localePath = params.locale === defaultLocale ? '' : `/${params.locale}`;
+  const canonicalUrl = `https://butterfly-coloring-pages.com${localePath}/coloring-pages/flower-coloring-pages`;
+
+  return {
+    title: 'Flower Coloring Pages - Free Printable Designs | butterfly-coloring-pages.com',
+    description: 'Download beautiful flower coloring pages for free. Roses, daisies, tulips and more floral designs for all ages to print and enjoy.',
+    keywords: ['flower coloring pages', 'printable flower designs', 'floral coloring pages', 'rose coloring pages', 'garden coloring sheets'],
+    robots: 'index, follow',
+    alternates: {
+      canonical: canonicalUrl
+    }
+  };
+}
 
 export default function FlowerColoringPages({
   params,
