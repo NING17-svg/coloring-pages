@@ -122,7 +122,7 @@ export default function ColoringImagePage({
                 {/* Download and share buttons */}
                 <div className="p-4 border-t flex justify-between items-center">
                   <Button asChild size="lg" variant="default">
-                    <Link href={`/api/download/${params.category}/${params.imageId}`}>
+                    <Link href={`/api/download/${params.category}/${params.imageId}`} rel="nofollow">
                       <Download className="mr-2 h-4 w-4" /> Download
                     </Link>
                   </Button>
@@ -173,7 +173,7 @@ export default function ColoringImagePage({
                 {/* Quick action buttons */}
                 <div className="space-y-3">
                   <Button asChild size="lg" className="w-full">
-                    <Link href={`/api/download/${params.category}/${params.imageId}`}>
+                    <Link href={`/api/download/${params.category}/${params.imageId}`} rel="nofollow">
                       <Download className="mr-2 h-4 w-4" /> Download
                     </Link>
                   </Button>
