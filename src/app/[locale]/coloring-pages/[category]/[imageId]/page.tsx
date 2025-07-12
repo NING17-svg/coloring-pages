@@ -84,8 +84,41 @@ export default function ColoringImagePage({
     return labels[ageGroup as keyof typeof labels] || ageGroup;
   };
   
+  // 构建结构化数据
+  const localePath = params.locale === defaultLocale ? '' : `/${params.locale}`;
+  const pageUrl = `https://butterfly-coloring-pages.com${localePath}/coloring-pages/${params.category}/${params.imageId}`;
+  const downloadUrl = `https://butterfly-coloring-pages.com/api/download/${params.category}/${params.imageId}`;
+  
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    'name': image.title,
+    'description': image.description,
+    'contentUrl': image.imageUrl,
+    'keywords': image.tags.join(', '),
+    'url': pageUrl,
+    'thumbnailUrl': image.imageUrl,
+    'datePublished': new Date().toISOString().split('T')[0],
+    'creator': {
+      '@type': 'Organization',
+      'name': 'butterfly-coloring-pages.com',
+      'url': 'https://butterfly-coloring-pages.com'
+    },
+    'potentialAction': {
+      '@type': 'DownloadAction',
+      'target': downloadUrl,
+      'name': 'Download Coloring Page'
+    }
+  };
+  
   return (
     <LayoutContainer>
+      {/* 添加结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      
       <section className="py-8">
         <div className="container mx-auto px-4">
           {/* Breadcrumb navigation */}

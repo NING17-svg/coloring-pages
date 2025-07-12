@@ -6,6 +6,17 @@ Allow: /
 Allow: /privacy
 Allow: /terms
 Allow: /about
+Allow: /coloring-pages
+Allow: /coloring-pages/butterfly-coloring-pages
+Allow: /coloring-pages/flower-coloring-pages
+Allow: /coloring-pages/dragon-coloring-pages
+Allow: /coloring-pages/unicorn-coloring-pages
+
+# 确保所有涂色页面被索引
+Allow: /coloring-pages/butterfly-coloring-pages/*
+Allow: /coloring-pages/flower-coloring-pages/*
+Allow: /coloring-pages/dragon-coloring-pages/*
+Allow: /coloring-pages/unicorn-coloring-pages/*
 
 # 标签页面 - 确保这些页面被抓取
 Allow: /coloring-pages?tag=stars

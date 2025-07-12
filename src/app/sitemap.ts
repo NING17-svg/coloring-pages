@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { getLocales } from '../i18n';
+import { getAllImagePaths, getCategoryData } from '@/lib/coloring-data';
 
 // 项目中实际使用的标签列表，用于生成标签页面的URL
 const tags = [
@@ -62,26 +63,42 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }
   }
   
-  // 这里可以添加动态数据，例如从数据库获取的着色页面
-  // 示例：如果有API或数据访问方法，可以在这里添加
-  /*
+  // 添加所有涂色页面到站点地图
   try {
-    const coloringPages = await fetchColoringPages();
-    for (const page of coloringPages) {
+    const coloringPaths = getAllImagePaths();
+    const categories = ['butterfly-coloring-pages', 'dragon-coloring-pages', 'flower-coloring-pages', 'unicorn-coloring-pages'];
+    
+    // 添加分类页面
+    for (const category of categories) {
+      const categoryData = getCategoryData(category);
+      if (categoryData) {
+        for (const locale of locales) {
+          const localePath = locale === 'en' ? '' : `/${locale}`;
+          entries.push({
+            url: `${siteUrl}${localePath}/coloring-pages/${category}`,
+            lastModified: currentDate,
+            changeFrequency: 'weekly',
+            priority: 0.8,
+          });
+        }
+      }
+    }
+    
+    // 添加单个图像页面
+    for (const path of coloringPaths) {
       for (const locale of locales) {
         const localePath = locale === 'en' ? '' : `/${locale}`;
         entries.push({
-          url: `${siteUrl}${localePath}/coloring-pages/${page.slug}`,
-          lastModified: page.updatedAt || currentDate,
+          url: `${siteUrl}${localePath}/coloring-pages/${path.category}/${path.imageId}`,
+          lastModified: currentDate,
           changeFrequency: 'weekly',
           priority: 0.7,
         });
       }
     }
   } catch (error) {
-    console.error('Error fetching coloring pages for sitemap:', error);
+    console.error('Error adding coloring pages to sitemap:', error);
   }
-  */
   
   return entries;
 } 

@@ -26,8 +26,45 @@ export default async function Home(props: { params: { locale: string } }) {
   
   const t = await getTranslations();
   
+  // 构建网站结构化数据
+  const websiteData = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    'name': 'Butterfly Coloring Pages',
+    'url': 'https://butterfly-coloring-pages.com',
+    'description': 'Free printable butterfly coloring pages and other designs for kids and adults',
+    'potentialAction': {
+      '@type': 'SearchAction',
+      'target': 'https://butterfly-coloring-pages.com/coloring-pages?q={search_term_string}',
+      'query-input': 'required name=search_term_string'
+    }
+  };
+  
+  // 构建组织结构化数据
+  const organizationData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    'name': 'Butterfly Coloring Pages',
+    'url': 'https://butterfly-coloring-pages.com',
+    'logo': 'https://butterfly-coloring-pages.com/logo.svg',
+    'sameAs': [
+      'https://www.facebook.com/butterflycoloringpages',
+      'https://www.pinterest.com/butterflycoloringpages'
+    ]
+  };
+  
   return (
     <LayoutContainer>
+      {/* 添加结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
+      />
+      
       {/* 英雄区域 */}
       <section className="relative py-16 md:py-24 bg-gradient-to-b from-indigo-50 to-white">
         <div className="container mx-auto px-4">
@@ -248,19 +285,19 @@ export default async function Home(props: { params: { locale: string } }) {
               <div className="bg-primary/10 p-4 rounded-full inline-flex items-center justify-center mb-4">
                 <Users className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">{t('home.features.forAll.title')}</h3>
+              <h3 className="text-xl font-semibold mb-2">{t('home.features.variety.title')}</h3>
               <p className="text-gray-600">
-                {t('home.features.forAll.description')}
+                {t('home.features.variety.description')}
               </p>
             </div>
             
             <div className="text-center p-6">
               <div className="bg-primary/10 p-4 rounded-full inline-flex items-center justify-center mb-4">
-                <Download className="h-8 w-8 text-primary" />
+                <Star className="h-8 w-8 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">{t('home.features.free.title')}</h3>
+              <h3 className="text-xl font-semibold mb-2">{t('home.features.quality.title')}</h3>
               <p className="text-gray-600">
-                {t('home.features.free.description')}
+                {t('home.features.quality.description')}
               </p>
             </div>
           </div>

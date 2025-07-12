@@ -38,9 +38,66 @@ export default function ButterflyColoringPages({
   // 获取蝴蝶分类数据
   const categoryData = getCategoryData('butterfly-coloring-pages');
   const images = categoryData?.images || [];
+  
+  // 构建结构化数据 - 面包屑导航
+  const localePath = params.locale === defaultLocale ? '' : `/${params.locale}`;
+  const siteUrl = 'https://butterfly-coloring-pages.com';
+  
+  const breadcrumbData = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': 'Home',
+        'item': `${siteUrl}${localePath}`
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': 'Coloring Pages',
+        'item': `${siteUrl}${localePath}/coloring-pages`
+      },
+      {
+        '@type': 'ListItem',
+        'position': 3,
+        'name': 'Butterfly Coloring Pages',
+        'item': `${siteUrl}${localePath}/coloring-pages/butterfly-coloring-pages`
+      }
+    ]
+  };
+  
+  // 构建结构化数据 - 集合页面
+  const collectionData = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    'name': 'Butterfly Coloring Pages',
+    'description': 'Explore our collection of free printable butterfly coloring pages. Perfect for kids and adults who love these beautiful insects with their delicate wings and patterns.',
+    'url': `${siteUrl}${localePath}/coloring-pages/butterfly-coloring-pages`,
+    'numberOfItems': images.length,
+    'mainEntity': {
+      '@type': 'ItemList',
+      'itemListElement': images.map((image, index) => ({
+        '@type': 'ListItem',
+        'position': index + 1,
+        'url': `${siteUrl}${localePath}/coloring-pages/butterfly-coloring-pages/${image.id}`
+      }))
+    }
+  };
 
   return (
     <LayoutContainer>
+      {/* 添加结构化数据 */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionData) }}
+      />
+      
       <section className="py-12">
         <div className="container px-4 mx-auto">
           <h1 className="text-4xl font-bold mb-4">Butterfly Coloring Pages</h1>
@@ -91,4 +148,4 @@ export default function ButterflyColoringPages({
       </section>
     </LayoutContainer>
   );
-} 
+}
